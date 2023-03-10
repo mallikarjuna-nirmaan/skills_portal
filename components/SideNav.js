@@ -11,7 +11,7 @@ import { FaBars } from 'react-icons/fa';
 import { ImBooks } from 'react-icons/im';
 import { IoIosPeople } from 'react-icons/io';
 import { IoPerson } from 'react-icons/io5';
-import { HiOfficeBuilding } from 'react-icons/hi';
+import { HiOfficeBuilding,HiMenuAlt3 } from 'react-icons/hi';
 import { RiMailSendFill } from 'react-icons/ri';
 import { AiTwotoneSetting } from 'react-icons/ai';
 import AccordionMenu from './AccordionMenu';
@@ -87,7 +87,7 @@ const SideNav = () => {
           open ? 'w-72' : 'w-20'
         } sticky top-0 duration-100`}
       >
-        <FaBars
+        <HiMenuAlt3
           onClick={() => setOpen(!open)}
           className={`bg-transparent text-blue-400 text-3xl mt-2 absolute cursor-pointer ${
             !open && 'rotate-180'

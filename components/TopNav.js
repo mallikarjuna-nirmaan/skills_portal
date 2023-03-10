@@ -75,8 +75,12 @@ const TopNav = () => {
 
   const barOthers2 = {
     scales: {
-      x: {
-        title: {},
+      y: {
+        title: {
+          display: true,
+          text: '(Number of students)',
+          color: 'black',
+        },
       },
     },
   };
@@ -341,8 +345,14 @@ const TopNav = () => {
         </div>
         <div className="grid grid-cols-2 mt-3 gap-7">
           <div className="h-[480px] bg-white shadow-sm rounded-md border"></div>
-          <div className="h-[480px] bg-white shadow-sm p-12 rounded-md border">
-            <Bar data={barData2} options={barOthers2}></Bar>
+          <div className="h-[480px] bg-white shadow-sm p-9 rounded-md border">
+            <p className='font-semibold text-lg'>Students analysis (By cycle)</p>
+           
+            <Bar
+              className="h-[900px] mt-4"
+              data={barData2}
+              options={barOthers2}
+            ></Bar>
           </div>
           <div className="h-96 bg-white shadow-sm rounded-md border">
             <Pie data={data} />
