@@ -82,7 +82,7 @@ const SideNav = () => {
   return (
     <div className="float-left">
       <div
-        className={`bg-dark  h-screen pt-4 ${
+        className={`bg-dark h-screen pt-4 ${
           //hover:w-72
           open ? 'w-72' : 'w-20'
         } sticky top-0 duration-100`}
@@ -96,7 +96,7 @@ const SideNav = () => {
         <div
           className={`bg-white  ${
             !open && 'scale-0'
-          } duration-75 p-3 pl-8 -mt-4`}
+          } duration-75 p-3 pl-8 -mt-5`}
         >
           <Image
             className="cursor-pointer"
@@ -107,8 +107,12 @@ const SideNav = () => {
           />
         </div>
 
-        <div className={`mt-14 text-xs ml-6 ${open && 'text-[...]'} mb-3`}>
-          <span>MENU</span>
+        <div className={`mt-12 text-xs ml-6 ${open && 'text-gray-700'} mb-3`}>
+          {open ? (
+            <span className="font-semibold">MENU</span>
+          ) : (
+            <span className="text-2xl mx-2">...</span>
+          )}
         </div>
 
         <ul>
@@ -129,7 +133,7 @@ const SideNav = () => {
               <li
                 key={index}
                 onClick={() => setSubmenuOpen(!submenuOpen)}
-                className={`text-white group-hover: text-[14px] pl-7 hover:bg-[#127873] flex duration-300 gap-x-5 cursor-pointer p-3.5`}
+                className={`text-white group-hover: text-[14px] pl-7 hover:bg-[#127873] flex duration-300 gap-x-5 cursor-pointer p-[14px]`}
               >
                 <span className="float-left text-xl block">
                   {item.icon ? item.icon : <BsLayersFill />}
