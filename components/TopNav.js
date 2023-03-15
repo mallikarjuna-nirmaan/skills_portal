@@ -1,9 +1,16 @@
 import { Fragment } from 'react';
 import { ImBooks } from 'react-icons/im';
-import { GiTie } from 'react-icons/gi';
+import { TbTie } from 'react-icons/tb';
 import { IoIosPeople } from 'react-icons/io';
 import { IoPeopleSharp, IoBagCheck } from 'react-icons/io5';
-import { BsPersonCheckFill, BsStopwatchFill } from 'react-icons/bs';
+import {
+  BsPersonCheckFill,
+  BsFillClockFill,
+  BsClockFill,
+  BsStopwatchFill,
+  BsClock,
+  BsAlarmFill,
+} from 'react-icons/bs';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
@@ -29,26 +36,20 @@ ChartJS.register(
 );
 
 export const data = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: ['teal', 'Blue', 'Purple'],
   datasets: [
     {
       label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+      data: [12.1, 87.2, 1],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
+        'rgb(27, 197, 189)',
+        'rgb(105, 147, 255)',
         'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
       ],
       borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
+        'rgb(128,128,128, 0.3)',
+        'rgb(128,128,128, 0.3)',
+        'rgb(128,128,128, 0.3)',
       ],
       borderWidth: 1,
     },
@@ -60,6 +61,18 @@ const TopNav = () => {
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
   }
+
+  const barData1 = {
+    labels: ['', '', ''],
+    datasets: [
+      {
+        label: 'placed',
+        data: [0, 0, 109],
+        backgroundColor: 'yellow',
+        borderWidth: 0,
+      },
+    ],
+  };
 
   const barData2 = {
     labels: ['cycle-1', 'cycle-2', 'cycle-3', 'cycle-4'],
@@ -73,12 +86,32 @@ const TopNav = () => {
     ],
   };
 
+  const barOptions1 = {
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: '(Number of students)',
+          color: 'black',
+        },
+      },
+      x: {
+        title: {
+          display: true,
+          text: '2022-23',
+          color: 'black',
+        },
+      },
+    },
+  };
+
   const barOthers2 = {
     scales: {
       y: {
         title: {
           display: true,
           text: '(Number of students)',
+          fontStyle: 'bold',
           color: 'black',
         },
       },
@@ -91,10 +124,10 @@ const TopNav = () => {
         <p className="text-4xl text-[#04045e] pt-1 font-semibold">Cigniti</p>
         <button className="w-48 flex h-12 my-1.5 rounded-lg justify-between px-1.5 py-[5px] border border-gray-200">
           <p className="py-2 text-[14px]">
-            <span className="text-gray-400">Hi,</span> Mallik
+            <span className="text-gray-400">Hi,</span> Mallikarjuna
           </p>
           <span className="h-9 w-9 py-1 font-semibold text-teal-500 rounded-lg bg-[#c9f7f5]">
-            S
+            M
           </span>
         </button>
       </div>
@@ -204,8 +237,8 @@ const TopNav = () => {
                   Active courses
                 </p>
               </div>
-              <div>
-                <ImBooks className="text-teal-500 h-16 w-11" />
+              <div className="mr-1">
+                <ImBooks className="text-teal-400 h-16 w-10" />
               </div>
             </div>
           </div>
@@ -217,8 +250,8 @@ const TopNav = () => {
                   Working Employees
                 </p>
               </div>
-              <div>
-                <GiTie className="text-teal-500 h-16 w-14" />
+              <div className="mr-1">
+                <TbTie className="text-teal-400 h-14 w-12" />
               </div>
             </div>
           </div>
@@ -230,8 +263,8 @@ const TopNav = () => {
                   Left Employees
                 </p>
               </div>
-              <div>
-                <GiTie className="text-teal-500 h-16 w-14" />
+              <div className="mr-1">
+                <TbTie className="text-teal-400 h-14 w-12" />
               </div>
             </div>
           </div>
@@ -249,8 +282,8 @@ const TopNav = () => {
                   Ongoing batches
                 </p>
               </div>
-              <div>
-                <BsStopwatchFill className="text-teal-500 h-14 w-10" />
+              <div className="mr-2">
+                <BsClockFill className="text-teal-400 h-14 w-9" />
               </div>
             </div>
           </div>
@@ -262,8 +295,8 @@ const TopNav = () => {
                   Completed batches
                 </p>
               </div>
-              <div>
-                <BsStopwatchFill className="text-teal-500 h-14 w-10" />
+              <div className="mr-2">
+                <BsClockFill className="text-teal-400 h-14 w-9" />
               </div>
             </div>
           </div>
@@ -275,8 +308,8 @@ const TopNav = () => {
                   Upcoming batches
                 </p>
               </div>
-              <div>
-                <BsStopwatchFill className="text-teal-500 h-14 w-10" />
+              <div className="mr-2">
+                <BsClockFill className="text-teal-400 h-14 w-9" />
               </div>
             </div>
           </div>
@@ -294,8 +327,8 @@ const TopNav = () => {
                   Joined Students
                 </p>
               </div>
-              <div>
-                <BsPersonCheckFill className="text-teal-500 h-14 w-11" />
+              <div className="mr-1">
+                <BsPersonCheckFill className="text-teal-400 h-14 w-11" />
               </div>
             </div>
           </div>
@@ -307,8 +340,8 @@ const TopNav = () => {
                   Ongoing Students
                 </p>
               </div>
-              <div>
-                <IoIosPeople className="text-teal-500 h-14 w-11" />
+              <div className="mr-1">
+                <IoIosPeople className="text-teal-400 h-14 w-11" />
               </div>
             </div>
           </div>
@@ -320,8 +353,8 @@ const TopNav = () => {
                   Graduated Students
                 </p>
               </div>
-              <div>
-                <IoPeopleSharp className="text-teal-500 h-14 w-11" />
+              <div className="mr-1">
+                <IoPeopleSharp className="text-teal-400 h-14 w-11" />
               </div>
             </div>
           </div>
@@ -333,8 +366,8 @@ const TopNav = () => {
                   Placed Students
                 </p>
               </div>
-              <div>
-                <IoBagCheck className="text-teal-500 h-14 w-11" />
+              <div className="mr-1">
+                <IoBagCheck className="text-teal-400 h-14 w-11" />
               </div>
             </div>
           </div>
@@ -344,21 +377,31 @@ const TopNav = () => {
           <p className="font-semibold">Analysis</p>
         </div>
         <div className="grid grid-cols-2 mt-3 gap-7">
-          <div className="h-[480px] bg-white shadow-sm rounded-md border"></div>
           <div className="h-[480px] bg-white shadow-sm p-9 rounded-md border">
-            <p className='font-semibold text-lg'>Students analysis (By cycle)</p>
-           
-            <Bar
-              className="h-[900px] mt-4"
-              data={barData2}
-              options={barOthers2}
-            ></Bar>
+            <p className="font-semibold text-lg">
+              Students analysis (By financial year)
+            </p>
+            <Bar className="mt-4" data={barData1} options={barOptions1}></Bar>
           </div>
-          <div className="h-96 bg-white shadow-sm rounded-md border">
-            <Pie data={data} />
+          <div className="h-[480px] bg-white shadow-sm p-9 rounded-md border">
+            <p className="font-semibold text-lg">
+              Students analysis (By cycle)
+            </p>
+            <Bar className="mt-4" data={barData2} options={barOthers2}></Bar>
           </div>
-          <div className="h-96 bg-white shadow-sm rounded-md border">
-            <Pie data={data} />
+          <div className="h-96 bg-white shadow-sm p-5 rounded-md border">
+            <p className="font-semibold text-lg">
+              Gender distribution of students
+            </p>
+            <hr className="my-3" />
+            <Pie className="m-auto" data={data} />
+          </div>
+          <div className="h-96 bg-white shadow-sm p-5 rounded-md border">
+            <p className="font-semibold text-lg">
+              Age distribution of students
+            </p>
+            <hr className="my-3" />
+            <Pie className="m-auto" data={data} />
           </div>
         </div>
       </div>
