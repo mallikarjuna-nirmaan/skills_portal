@@ -35,12 +35,12 @@ ChartJS.register(
   LinearScale
 );
 
-export const data = {
-  labels: ['teal', 'Blue', 'Purple'],
+export const data1 = {
+  labels: ['teal', 'Purple'],
   datasets: [
     {
-      label: '# of Votes',
-      data: [12.1, 87.2, 1],
+      // label: '# of Votes',
+      data: [12.1, 87.8],
       backgroundColor: [
         'rgb(27, 197, 189)',
         'rgb(105, 147, 255)',
@@ -51,7 +51,28 @@ export const data = {
         'rgb(128,128,128, 0.3)',
         'rgb(128,128,128, 0.3)',
       ],
-      borderWidth: 1,
+      borderWidth: 2,
+    },
+  ],
+};
+
+export const data2 = {
+  labels: ['15-20', '21-25', '26+'],
+  datasets: [
+    {
+      // label: '# of Votes',
+      data: [40.3, 53.2, 6.1],
+      backgroundColor: [
+        'rgb(27, 197, 189)',
+        'rgb(105, 147, 255)',
+        'rgb(255,255,0,0.9)',
+      ],
+      borderColor: [
+        'rgb(128,128,128, 0.1)',
+        'rgb(128,128,128, 0.4)',
+        'rgb(128,128,128, 0.3)',
+      ],
+      borderWidth: 2,
     },
   ],
 };
@@ -377,6 +398,7 @@ const TopNav = () => {
           <p className="font-semibold">Analysis</p>
         </div>
         <div className="grid grid-cols-2 mt-3 gap-7">
+          {/* Bar chart */}
           <div className="h-[480px] bg-white shadow-sm p-9 rounded-md border">
             <p className="font-semibold text-lg">
               Students analysis (By financial year)
@@ -389,19 +411,21 @@ const TopNav = () => {
             </p>
             <Bar className="mt-4" data={barData2} options={barOthers2}></Bar>
           </div>
+
+          {/* pie chart */}
           <div className="h-96 bg-white shadow-sm p-5 rounded-md border">
             <p className="font-semibold text-lg">
               Gender distribution of students
             </p>
             <hr className="my-3" />
-            <Pie className="m-auto" data={data} />
+            <Pie className="m-auto" data={data1} />
           </div>
           <div className="h-96 bg-white shadow-sm p-5 rounded-md border">
             <p className="font-semibold text-lg">
               Age distribution of students
             </p>
             <hr className="my-3" />
-            <Pie className="m-auto" data={data} />
+            <Pie className="m-auto" data={data2} />
           </div>
         </div>
       </div>
