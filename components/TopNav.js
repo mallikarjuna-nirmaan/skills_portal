@@ -36,15 +36,15 @@ ChartJS.register(
 );
 
 export const data1 = {
-  labels: ['teal', 'Purple'],
+  labels: ['male', 'female', 'others'],
   datasets: [
     {
       // label: '# of Votes',
-      data: [12.1, 87.8],
+      data: [12.1, 87.8, 0],
       backgroundColor: [
         'rgb(27, 197, 189)',
         'rgb(105, 147, 255)',
-        'rgba(153, 102, 255, 0.2)',
+        'rgb(255,255,0,0.9)',
       ],
       borderColor: [
         'rgb(128,128,128, 0.3)',
@@ -399,13 +399,13 @@ const TopNav = () => {
         </div>
         <div className="grid grid-cols-2 mt-3 gap-7">
           {/* Bar chart */}
-          <div className="h-[480px] bg-white shadow-sm p-9 rounded-md border">
+          <div className="h-auto bg-white shadow-sm p-9 rounded-md border">
             <p className="font-semibold text-lg">
               Students analysis (By financial year)
             </p>
             <Bar className="mt-4" data={barData1} options={barOptions1}></Bar>
           </div>
-          <div className="h-[480px] bg-white shadow-sm p-9 rounded-md border">
+          <div className="h-auto bg-white shadow-sm p-9 rounded-md border">
             <p className="font-semibold text-lg">
               Students analysis (By cycle)
             </p>
@@ -413,18 +413,18 @@ const TopNav = () => {
           </div>
 
           {/* pie chart */}
-          <div className="h-96 bg-white shadow-sm p-5 rounded-md border">
+          <div className="h-auto bg-white shadow-sm p-4 rounded-md border">
             <p className="font-semibold text-lg">
               Gender distribution of students
             </p>
-            <hr className="my-3" />
+            <hr className="my-2.5" />
             <Pie className="m-auto" data={data1} />
           </div>
-          <div className="h-96 bg-white shadow-sm p-5 rounded-md border">
+          <div className="h-auto bg-white shadow-sm p-4 rounded-md border">
             <p className="font-semibold text-lg">
               Age distribution of students
             </p>
-            <hr className="my-3" />
+            <hr className="my-2.5" />
             <Pie className="m-auto" data={data2} />
           </div>
         </div>
