@@ -7,7 +7,6 @@ import {
   BsPersonSquare,
   BsPersonPlusFill,
 } from 'react-icons/bs';
-import { FaBars } from 'react-icons/fa';
 import { ImBooks } from 'react-icons/im';
 import { IoIosPeople } from 'react-icons/io';
 import { IoPerson } from 'react-icons/io5';
@@ -20,12 +19,12 @@ const SideNav = () => {
   const [open, setOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
 
-  const toggle = (index) => {
-    if (open === index) {
-      setOpen(null);
-    }
-    setOpen(index);
-  };
+  // const toggle = (index) => {
+  //   if (open === index) {
+  //     setOpen(null);
+  //   }
+  //   setOpen(index);
+  // };
 
   const Menus = [
     { title: 'Dashboard' },
