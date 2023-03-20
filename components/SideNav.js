@@ -172,7 +172,6 @@ const SideNav = () => {
           ))}
         </ul>
       </div>
-      <div className="font-semibold">home page</div>
     </div>
   );
 };
