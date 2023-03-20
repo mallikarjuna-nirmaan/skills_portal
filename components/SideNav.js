@@ -133,7 +133,7 @@ const SideNav = () => {
             <>
               <li
                 key={index}
-                onClick={() => setSubmenuOpen(!submenuOpen)}
+                // onClick={() => setSubmenuOpen(!submenuOpen)}
                 className={`text-white group-hover: text-[14px] pl-7 hover:bg-[#127873] flex duration-300 gap-x-5 cursor-pointer p-[14px]`}
               >
                 <span className="float-left text-xl block">
@@ -148,6 +148,7 @@ const SideNav = () => {
                 </span>
                 {item.submenu && open && (
                   <BiChevronRight
+                    onClick={() => setSubmenuOpen(!submenuOpen)}
                     className={`font-semibold text-lg ${
                       submenuOpen && 'rotate-90'
                     } duration-100 mr-2`}
