@@ -1,12 +1,3 @@
-import { Fragment } from 'react';
-import { ImBooks } from 'react-icons/im';
-import { TbTie } from 'react-icons/tb';
-import { IoIosPeople } from 'react-icons/io';
-import { IoPeopleSharp, IoBagCheck } from 'react-icons/io5';
-import { BsPersonCheckFill, BsClockFill } from 'react-icons/bs';
-import { Menu, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
-
 //main
 const TopNav = () => {
   return (
