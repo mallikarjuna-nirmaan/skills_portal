@@ -136,7 +136,7 @@ const dashboard = () => {
   return (
     <div className="flex">
       <SideNav />
-      <div className='w-full'>
+      <div className="w-full">
         <TopNav />
         <div className="bg-[#eef0f8] px-7 py-8 h-full w-auto">
           {/* Dashboard */}
@@ -235,8 +235,8 @@ const dashboard = () => {
             </div>
           </div>
           {/* Employees */}
-          <div className=" flex mt-5 mb-8 gap-7">
-            <div className="w-[23.5%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+          <div className="max-[1200px]:flex-col flex mt-5 mb-8 gap-7">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">1</p>
@@ -249,7 +249,7 @@ const dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[23.5%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">1</p>
@@ -262,7 +262,7 @@ const dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[23.5%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">0</p>
@@ -280,8 +280,8 @@ const dashboard = () => {
           <div>
             <p className="font-semibold">Batches</p>
           </div>
-          <div className=" flex mt-3 mb-8 gap-7">
-            <div className="w-[23.5%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+          <div className="max-[1200px]:flex-col flex mt-3 mb-8 gap-7">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">0</p>
@@ -294,7 +294,7 @@ const dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[23.5%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">0</p>
@@ -307,7 +307,7 @@ const dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[23.5%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">0</p>
@@ -325,8 +325,8 @@ const dashboard = () => {
           <div>
             <p className="font-semibold">Students</p>
           </div>
-          <div className=" flex mt-3 mb-8 gap-7">
-            <div className="w-[24%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+          <div className="max-[1200px]:flex-col flex mt-3 mb-8 gap-7">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">0</p>
@@ -339,7 +339,7 @@ const dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[24%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">0</p>
@@ -352,7 +352,7 @@ const dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[24%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">0</p>
@@ -365,7 +365,7 @@ const dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[24%] h-[100px] bg-white px-7 py-5 shadow-md lg:max-w-md rounded-md">
+            <div className="w-[23.5%] max-[1200px]:w-full h-[100px] bg-white px-7 py-5 shadow-md rounded-md">
               <div className="flex justify-between">
                 <div>
                   <p className="text-2xl font-bold">0</p>
