@@ -79,7 +79,7 @@ const SideNav = () => {
   ];
 
   return (
-    <div className="float-left">
+    <div className="float-left max-[980px]:hidden duration-300">
       <div
         className={`bg-dark h-screen pt-4 ${
           //hover:w-72
@@ -107,6 +107,16 @@ const SideNav = () => {
             alt="logo"
           />
         </div>
+
+        {/* <div className="duration-500 p-1 pl-3">
+          <Image
+            className="cursor-pointer min-[980px]:hidden"
+            src="/images/logo.png"
+            width="100"
+            height="10"
+            alt="logo"
+          />
+        </div> */}
 
         <div className={`mt-12 text-xs ml-6 ${open && 'text-gray-700'} mb-3`}>
           {open ? (
