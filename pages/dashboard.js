@@ -386,13 +386,13 @@ const dashboard = () => {
           <div className="grid grid-cols-2 mt-3 gap-7">
             {/* Bar chart */}
             <div className="h-auto bg-white shadow-sm p-9 rounded-md border">
-              <p className="font-semibold text-lg">
+              <p className="font-semibold max-[1200px]:text-base text-lg">
                 Students analysis (By financial year)
               </p>
               <Bar className="mt-4" data={barData1} options={barOptions1}></Bar>
             </div>
             <div className="h-auto bg-white shadow-sm p-9 rounded-md border">
-              <p className="font-semibold text-lg">
+              <p className="font-semibold max-[1200px]:text-base text-lg">
                 Students analysis (By cycle)
               </p>
               <Bar className="mt-4" data={barData2} options={barOthers2}></Bar>
@@ -400,14 +400,14 @@ const dashboard = () => {
 
             {/* pie chart */}
             <div className="h-auto bg-white shadow-sm p-4 rounded-md border">
-              <p className="font-semibold text-lg">
+              <p className="font-semibold max-[1200px]:text-base text-lg">
                 Gender distribution of students
               </p>
               <hr className="my-2.5" />
               <Pie className="m-auto" data={data1} />
             </div>
             <div className="h-auto bg-white shadow-sm p-4 rounded-md border">
-              <p className="font-semibold text-lg">
+              <p className="font-semibold max-[1200px]:text-base text-lg">
                 Age distribution of students
               </p>
               <hr className="my-2.5" />
