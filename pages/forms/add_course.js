@@ -38,29 +38,13 @@ const add_course = () => {
          placeholder="Enter full Name "
        />
      </div>
-    
-
-
-
-
-
           </div>
-
-
-          
-
-
-
           <div className="">
             <div className="w-full">
               <div className="flex flex-wrap">
-               
               </div>
             </div>
           </div>
-
-
-
           <div className="py-3">
             <div className="w-full">
               <div className="flex flex-wrap">
@@ -98,8 +82,6 @@ const add_course = () => {
     </div>
    
   </label>
-
-
                 </div>
 
                 <div>
@@ -108,13 +90,9 @@ const add_course = () => {
             <p>Save</p>
           </button>
     </div>
-
                     </div>
-
             </div>
-
 </div>
-
         </div>
       </div>
     </div>

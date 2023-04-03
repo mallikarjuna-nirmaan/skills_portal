@@ -1,8 +1,6 @@
 import SideNav from '@/components/SideNav';
 import TopNav from '@/components/TopNav';
 
-
-
 const create_donor= () => {
  
   return (
@@ -58,12 +56,6 @@ const create_donor= () => {
                 placeholder="Enter Last Name"
               />
             </div>
-            
-            
-
-
-
-
 <div className="w-full md:w-1/2 p-3">
               <p className="mb-1.5 font-medium text-base text-coolGray-800">
                 Contact Phone:
