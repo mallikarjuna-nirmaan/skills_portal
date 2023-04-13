@@ -138,7 +138,7 @@ const dashboard = () => {
       <SideNav />
       <div className="w-full">
         <TopNav />
-        <div className="bg-[#eef0f8] px-7 py-8 h-full w-auto">
+        <div className="bg-[#eef0f8] px-7 py-8 max-[980px]:px-4 max-[980px]:py-4 h-full w-auto">
           {/* Dashboard */}
           <div className="flex justify-between">
             <p className="font-semibold">Dashboard</p>
@@ -383,7 +383,7 @@ const dashboard = () => {
           <div>
             <p className="font-semibold">Analysis</p>
           </div>
-          <div className="grid grid-cols-2 mt-3 gap-7">
+          <div className="grid max-[980px]:grid-cols-1 grid-cols-2 mt-3 gap-7">
             {/* Bar chart */}
             <div className="h-auto bg-white shadow-sm p-9 rounded-md border">
               <p className="font-semibold max-[1200px]:text-base text-lg">
