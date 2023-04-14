@@ -1,19 +1,20 @@
-import Image from 'next/image';
-import { useState } from 'react';
-import { BiChevronRight } from 'react-icons/bi';
+import Image from "next/image";
+import { useState } from "react";
+import { BiChevronRight } from "react-icons/bi";
 import {
   BsLayersFill,
   BsDot,
   BsPersonSquare,
   BsPersonPlusFill,
-} from 'react-icons/bs';
-import { ImBooks } from 'react-icons/im';
-import { IoIosPeople } from 'react-icons/io';
-import { IoPerson } from 'react-icons/io5';
-import { HiOfficeBuilding, HiMenuAlt3 } from 'react-icons/hi';
-import { RiMailSendFill } from 'react-icons/ri';
-import { AiTwotoneSetting } from 'react-icons/ai';
-import AccordionMenu from './AccordionMenu';
+} from "react-icons/bs";
+import { ImBooks } from "react-icons/im";
+import { IoIosPeople } from "react-icons/io";
+import { IoPerson } from "react-icons/io5";
+import { HiOfficeBuilding, HiMenuAlt3 } from "react-icons/hi";
+import { RiMailSendFill } from "react-icons/ri";
+import { AiTwotoneSetting } from "react-icons/ai";
+import AccordionMenu from "./AccordionMenu";
+import Link from "next/link";
 
 const SideNav = () => {
   const [open, setOpen] = useState(false);
@@ -27,54 +28,62 @@ const SideNav = () => {
   // };
 
   const Menus = [
-    { title: 'Dashboard' },
+    { title: "Dashboard", path: "/dashboard" },
     {
-      title: 'Employees',
+      title: "Employees",
+      path: "/employees/create_employee",
       icon: <BsPersonSquare />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
-      title: 'Courses',
+      title: "Courses",
+      path: "/courses/add_course",
       icon: <ImBooks />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
-      title: 'Batches',
+      title: "Batches",
+      path: "/batches/create_batch",
       icon: <IoIosPeople />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
-      title: 'Students',
+      title: "Students",
+      path: "/students/create_student",
       icon: <IoPerson />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
-      title: 'Employers',
+      title: "Employers",
+      path: "/employers/create_employer",
       icon: <HiOfficeBuilding />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
-      title: 'Placements',
+      title: "Placements",
+      path: "/placements/create_placement",
       icon: <BsPersonPlusFill />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
-      title: 'Job Postings',
+      title: "Job Postings",
+      path: "/postings/add_job",
       icon: <RiMailSendFill />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
-      title: 'Settings',
+      title: "Settings",
+      path: "/",
       icon: <AiTwotoneSetting />,
       submenu: true,
-      submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
+      submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],
     },
   ];
 
@@ -83,20 +92,20 @@ const SideNav = () => {
       <div
         className={`bg-dark h-screen pt-4 ${
           //hover:w-72
-          open ? 'w-72' : 'w-20'
+          open ? "w-72" : "w-20"
         } sticky top-0 duration-100`}
       >
         <HiMenuAlt3
           onClick={() => setOpen(!open)}
           className={`bg-transparent text-4xl mt-1 absolute cursor-pointer ${
             !open
-              ? 'rotate-180 duration-300 text-blue-400 '
-              : 'text-gray-400 duration-300 hover:text-blue-400'
+              ? "rotate-180 duration-300 text-blue-400 "
+              : "text-gray-400 duration-300 hover:text-blue-400"
           } right-6`}
         />
         <div
           className={`bg-white  ${
-            !open && 'scale-0'
+            !open && "scale-0"
           } duration-75 p-3 pl-8 -mt-5`}
         >
           <Image
@@ -118,7 +127,7 @@ const SideNav = () => {
           />
         </div> */}
 
-        <div className={`mt-12 text-xs ml-6 ${open && 'text-gray-700'} mb-3`}>
+        <div className={`mt-12 text-xs ml-6 ${open && "text-gray-700"} mb-3`}>
           {open ? (
             <span className="font-semibold">MENU</span>
           ) : (
@@ -128,43 +137,33 @@ const SideNav = () => {
 
         <ul>
           {Menus.map((item, index) => (
-            // return (
-            //   <AccordionMenu
-            //     key={index}
-            //     submenuOpen={submenuOpen}
-            //     open={index === open}
-            //     title={item.title}
-            //     icon={item.icon}
-            //     submenu={item.submenu}
-            //     submenuItems={item.submenuItems}
-            //     toggle={() => toggle(index)}
-            //   />
-            // );
             <>
-              <li
-                key={index}
-                // onClick={() => setSubmenuOpen(!submenuOpen)}
-                className={`text-white group-hover: text-[14px] pl-7 hover:bg-[#127873] flex duration-300 gap-x-5 cursor-pointer p-[14px]`}
-              >
-                <span className="float-left text-xl block">
-                  {item.icon ? item.icon : <BsLayersFill />}
-                </span>
-                <span
-                  className={`font-medium flex-1 ${
-                    !open ? 'hidden' : 'visible'
-                  }`}
+              <Link href={`/${item.path}`}>
+                <li
+                  key={index}
+                  // onClick={() => setSubmenuOpen(!submenuOpen)}
+                  className={`text-white text-[14px] pl-7 hover:bg-[#127873] flex duration-300 gap-x-5 cursor-pointer p-[14px]`}
                 >
-                  {item.title}
-                </span>
-                {item.submenu && open && (
-                  <BiChevronRight
-                    onClick={() => setSubmenuOpen(!submenuOpen)}
-                    className={`font-semibold text-lg ${
-                      submenuOpen && 'rotate-90'
-                    } duration-100 mr-2`}
-                  />
-                )}
-              </li>
+                  <span className="float-left text-xl block">
+                    {item.icon ? item.icon : <BsLayersFill />}
+                  </span>
+                  <span
+                    className={`font-medium flex-1 ${
+                      !open ? "hidden" : "visible"
+                    }`}
+                  >
+                    {item.title}
+                  </span>
+                  {item.submenu && open && (
+                    <BiChevronRight
+                      onClick={() => setSubmenuOpen(!submenuOpen)}
+                      className={`font-semibold text-lg ${
+                        submenuOpen && "rotate-90"
+                      } duration-100 mr-2`}
+                    />
+                  )}
+                </li>
+              </Link>
               {item.submenu && submenuOpen && open && (
                 <ul>
                   {item.submenuItems.map((submenuItem, index) => (
