@@ -9,8 +9,8 @@ const TopNav = () => {
 
   return (
     <div className="w-full sticky top-0">
-      <div className="bg-white max-[980px]:bg-[#1a1a27]  max-[980px]:h-[60px] w-full shadow-md flex justify-between px-6 from-neutral-500 h-[70px]">
-        <div className="duration-500 p-1 pl-3">
+      <div className="bg-white max-[980px]:bg-[#1a1a27] max-[980px]:h-[58px] w-full shadow-md flex justify-between px-6 from-neutral-500 h-[70px]">
+        <div className="duration-500 pl-0 p-1">
           <Image
             className="cursor-pointer min-[980px]:hidden"
             src="/images/logo.png"
@@ -23,12 +23,12 @@ const TopNav = () => {
           Cigniti
         </p>
 
-        <div className="min-[980px]:hidden justify-between my-4">
+        <div className="min-[980px]:hidden justify-between">
           <HiMenuAlt3
             onClick={() => setOpen(!open)}
-            className="text-3xl absolute hover:text-blue-400 cursor-pointer duration-500 text-gray-600 right-6"
+            className="text-4xl absolute w-[120px] hover:text-blue-400 my-3 cursor-pointer duration-500 text-gray-600 right-6"
           />
-          <IoPerson className="text-3xl ml-3 absolute hover:text-blue-400 cursor-pointer duration-500 text-gray-600 right-6" />
+          <IoPerson className="text-2xl absolute hover:text-blue-400 my-[17px] cursor-pointer duration-500 text-gray-600 right-6" />
         </div>
 
         <button className="w-48 flex h-12 mt-2.5 max-[980px]:hidden rounded-lg justify-between px-1.5 py-[5px] border border-gray-200">
