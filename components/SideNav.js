@@ -92,14 +92,14 @@ const SideNav = () => {
       <div
         className={`bg-dark h-screen pt-4 ${
           //hover:w-72
-          open ? "w-72" : "w-20"
+          open ? "w-72" : `w-20 hover:${open ? "w-72" : "" }`
         } sticky top-0 duration-100`}
       >
         <HiMenuAlt3
           onClick={() => setOpen(!open)}
           className={`bg-transparent text-4xl mt-1 absolute cursor-pointer ${
             !open
-              ? "rotate-180 duration-300 text-blue-400 "
+              ? "rotate-180 duration-300 text-blue-400"
               : "text-gray-400 duration-300 hover:text-blue-400"
           } right-6`}
         />
