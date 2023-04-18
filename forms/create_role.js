@@ -3,7 +3,7 @@ import TopNav from '@/components/TopNav';
 
 
 
-const create_employer = () => {
+const create_role = () => {
  
   return (
     <div className="flex bg-blue-50">
@@ -12,61 +12,41 @@ const create_employer = () => {
         <TopNav />
         <section className=" py-20 text-gray-500  ">
   <div className="container px-4 mx-auto bg-white  ">
-  <h2 className="text-lg font-medium  text-gray-600 text-employer py-12">CREATE EMPLOYER</h2>
+  <h2 className="text-2xl font-medium  text-gray-600 text-employer py-12">CREATE ROLE</h2>
     <div className=" py-8 flex justify-center items-center -m-3 mb-3  ">
       <div className="w-full md:w-3/4 p-3">
         <div className="p-6 h-full overflow-hidden  rounded-md">
           <div className="flex flex-wrap pb-3 -m-3">
          
-            <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Company Name 
+           
+          <div className="w-full md:w-1/2 p-3">
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Title 
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="text"
-                placeholder="Enter Company Name  "
+                placeholder="Enter Role Title  "
               />
             </div>
 
 
 
-
-
-
-
-
-
-
             <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-    Sector 
+  <p className="mb-1.5 font-medium text-base text-coolGray-800">
+    Role Type 
   </p>
   <select 
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+    className="w-full px-4 py-2.5 text-base bg-white text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
     defaultValue="">
-    <option value="IT" >IT</option>
-    <option value="Non IT" >Non IT</option>
- 
-  
-  </select>
-</div>
-
-
-<div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-    Company Type 
-  </p>
-  <select 
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white "
-    defaultValue="">
-    <option value="MNC">MNC </option>
-    <option value="Mid Level" >Mid Level</option>
-    <option value="Startup" >Startup</option>
     
-  
+    <option value="staff">Staff</option>
+    <option value="Trainer">Trainer </option>
+
   </select>
 </div>
+
+
 
 
 
@@ -77,7 +57,15 @@ const create_employer = () => {
 
           </div>
 
-
+          <div className="w-full">
+                  <p className="mb-1 text-sm text-coolGray-800 font-semibold">
+                Job Description  : 
+                  </p>
+                  <textarea
+                    className="block w-full h-32 p-4 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input resize-none"
+                    defaultValue={""}
+                  />
+                </div>
           
 
 
@@ -129,4 +117,4 @@ const create_employer = () => {
   );
 };
 
-export default create_employer;
+export default create_role;

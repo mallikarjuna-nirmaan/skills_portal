@@ -9,19 +9,19 @@ const create_placement = () => {
         <TopNav />
         <section className=" py-20  text-gray-500  ">
           <div className="container px-4 mx-auto bg-white  ">
-            <h2 className="text-2xl font-medium  text-gray-600  py-12">
-              CREATE PLACEMENTS
+            <h2 className="text-lg font-medium  text-gray-600  py-12">
+              CREATE PLACEMENT
             </h2>
             <div className=" py-8 flex justify-center items-center -m-3 mb-3  ">
               <div className="w-full md:w-3/4 p-3">
                 <div className="p-6 h-full overflow-hidden  rounded-md">
                   <div className="flex flex-wrap pb-3 -m-3">
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Year:
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Year
                       </p>
                       <select
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
                         defaultValue=""
                       >
                         <option value="" disabled>
@@ -31,11 +31,11 @@ const create_placement = () => {
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Batch :
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Batch 
                       </p>
                       <select
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
                         defaultValue=""
                       >
                         <option value="1">1</option>
@@ -102,21 +102,21 @@ const create_placement = () => {
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Student:
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Student
                       </p>
                       <select
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
                         defaultValue=""
                       ></select>
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Placement Type:
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Placement Type
                       </p>
                       <select
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
                         defaultValue=""
                       >
                         <option value="Placed in a Company ">
@@ -128,109 +128,109 @@ const create_placement = () => {
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Company:
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Company
                       </p>
                       <input
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                         type="text"
                         placeholder="Enter Company "
                       />
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Designation:
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Designation
                       </p>
                       <input
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                         type="text"
                         placeholder="Enter Designation "
                       />
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Location:
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Location
                       </p>
                       <input
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                         type="text"
                         placeholder="Enter Location "
                       />
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Salary:
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Salary
                       </p>
                       <input
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                         type="number"
-                        placeholder="Enter Salary"
+                        placeholder="Enter Salary (Month)"
                       />
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Technical Skills:
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Technical Skills
                       </p>
                       <input
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                         type="text"
                         placeholder=" "
                       />
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Other Benefits:
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Other Benefits
                       </p>
                       <input
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                         type="text"
                         placeholder="Enter Other Benefits "
                       />
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Date of Join :
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Date of Join 
                       </p>
                       <input
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                         type="Date"
                         placeholder=""
                       />
                     </div>
                     <div className="w-full md:w-1/2 p-3">
-                      <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Offer Letter :
+                      <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+                        Offer Letter 
                       </p>
                       <input
-                        className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                        className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                         type="file"
                         accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                         placeholder=""
                       />
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full  p-3">
                       <p className="mb-1 text-sm text-coolGray-800 font-semibold">
-                        Success story :
+                        Success story 
                       </p>
                       <textarea
-                        className="block w-full h-32 p-4 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input resize-none"
+                        className="block w-full h-20 p-4 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input resize-none"
                         defaultValue={""}
                       />
                     </div>
 
-                    <div className="w-full">
+                    <div className="w-full p-3">
                       <p className="mb-1 text-sm text-coolGray-800 font-semibold">
-                        Remarks :
+                        Remarks
                       </p>
                       <textarea
-                        className="block w-full h-32 p-4 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input resize-none"
+                        className="block w-full h-20 p-4 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input resize-none"
                         defaultValue={""}
                       />
                     </div>

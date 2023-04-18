@@ -33,7 +33,7 @@ const TopNav = () => {
 
         <button className="w-48 flex h-12 mt-2.5 max-[980px]:hidden rounded-lg justify-between px-1.5 py-[5px] border border-gray-200">
           <p className="py-2 text-[14px]">
-            <span className="text-gray-400">Hi,</span> Mallikarjuna
+            <span className="text-gray-400"></span> 
           </p>
           <span className="h-9 w-9 py-1 font-semibold text-teal-500 rounded-lg bg-[#c9f7f5]">
             M

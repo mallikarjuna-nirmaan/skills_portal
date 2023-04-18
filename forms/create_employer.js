@@ -12,18 +12,18 @@ const create_employer = () => {
         <TopNav />
         <section className=" py-20 text-gray-500  ">
   <div className="container px-4 mx-auto bg-white  ">
-  <h2 className="text-lg font-medium  text-gray-600 text-employer py-12">CREATE EMPLOYER</h2>
+  <h2 className="text-2xl font-medium  text-gray-600 text-employer py-12">CREATE EMPLOYER</h2>
     <div className=" py-8 flex justify-center items-center -m-3 mb-3  ">
       <div className="w-full md:w-3/4 p-3">
         <div className="p-6 h-full overflow-hidden  rounded-md">
           <div className="flex flex-wrap pb-3 -m-3">
          
             <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Company Name 
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Company Name : 
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="text"
                 placeholder="Enter Company Name  "
               />
@@ -39,11 +39,11 @@ const create_employer = () => {
 
 
             <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-    Sector 
+  <p className="mb-1.5 font-medium text-base text-coolGray-800">
+    Sector: 
   </p>
   <select 
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
     defaultValue="">
     <option value="IT" >IT</option>
     <option value="Non IT" >Non IT</option>
@@ -54,11 +54,11 @@ const create_employer = () => {
 
 
 <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-    Company Type 
+  <p className="mb-1.5 font-medium text-base text-coolGray-800">
+    Company Type: 
   </p>
   <select 
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white "
+    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white "
     defaultValue="">
     <option value="MNC">MNC </option>
     <option value="Mid Level" >Mid Level</option>

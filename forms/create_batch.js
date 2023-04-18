@@ -12,38 +12,38 @@ const create_batch = () => {
         <TopNav />
         <section className=" py-20 text-gray-500  ">
   <div className="container px-4 mx-auto bg-white  ">
-  <h2 className="text-lg font-medium  text-gray-600  py-12">CREATE BATCH</h2>
+  <h2 className="text-2xl font-medium  text-gray-600  py-12">CREATE BATCH</h2>
     <div className=" py-8 flex justify-center items-center -m-3 mb-3  ">
       <div className="w-full md:w-3/4 p-3">
         <div className="p-6 h-full overflow-hidden  rounded-md">
           <div className="flex flex-wrap pb-3 -m-3">
          
           <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Batch ID
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Batch ID#:
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="number"
                 placeholder="Enter Batch ID"
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Batch Code
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Batch Code#:
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="text"
                 placeholder="Enter Batch Code "
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
+  <p className="mb-1.5 font-medium text-base text-coolGray-800">
     Course 
   </p>
   <select 
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
     defaultValue="">
     <option value="" disabled>WA</option>
   
@@ -51,42 +51,42 @@ const create_batch = () => {
 </div>
 
 <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Course Code
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Course Code#:
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="text"
                 placeholder="Enter Course Code  "
               />
             </div>
 
             <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Start Date 
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Start Date :
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="Date"
                 placeholder=""
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                End Date 
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                End Date :
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="Date"
                 placeholder=""
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-    Start Time
+  <p className="mb-1.5 font-medium text-base text-coolGray-800">
+    Start Time:
   </p>
   <input
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
     type="time"
     placeholder="HH:MM"
   />
@@ -94,11 +94,11 @@ const create_batch = () => {
 
 
 <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-    End Time
+  <p className="mb-1.5 font-medium text-base text-coolGray-800">
+    End Time:
   </p>
   <input
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
     type="time"
     placeholder="HH:MM"
   />
@@ -106,21 +106,21 @@ const create_batch = () => {
 
 
 <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Batch Limit
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Batch Limit:
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="number"
                 placeholder="Enter Batch ID"
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-    Cycle
+  <p className="mb-1.5 font-medium text-base text-coolGray-800">
+    Cycle: 
   </p>
   <select 
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
     defaultValue="Cycle-1">
     <option value="Cycle-1" >Cycle-1</option>
     <option value="Cycle-2" >Cycle-2</option>
@@ -131,21 +131,21 @@ const create_batch = () => {
 </div>
 
 <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Eligible Min Age 
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Eligible Min Age :
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="number"
                 placeholder="Enter Min Age:"
               />
             </div>
             <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Eligible Max Age 
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Eligible Max Age :
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="number"
                 placeholder="Enter Maximum Age"
               />
@@ -153,22 +153,22 @@ const create_batch = () => {
 
 
 <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Eligible Qualification
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Eligible Qualification:
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="text"
                 placeholder="Enter Qualification  "
               />
             </div>
 
             <div className="w-full md:w-1/2 p-3">
-              <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                Max Eligible Income
+              <p className="mb-1.5 font-medium text-base text-coolGray-800">
+                Max Eligible Income:
               </p>
               <input
-                className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
+                className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
                 type="text"
                 placeholder="Enter Maximum Income "
               />
@@ -176,11 +176,11 @@ const create_batch = () => {
 
 
             <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-    Gender
+  <p className="mb-1.5 font-medium text-base text-coolGray-800">
+    Gender: 
   </p>
   <select 
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
     defaultValue="">
     <option value="Cycle-1" >Male </option>
     <option value="Cycle-2" >Female</option>
@@ -192,11 +192,11 @@ const create_batch = () => {
 
 
 <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-    Batch Status
+  <p className="mb-1.5 font-medium text-base text-coolGray-800">
+    Batch Status: 
   </p>
   <select 
-    className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
+    className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
     defaultValue="">
     <option value="Cycle-1" >Upcoming </option>
     <option value="Cycle-2" >Ongoing</option>
