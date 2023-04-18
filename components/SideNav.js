@@ -92,7 +92,7 @@ const SideNav = () => {
       <div
         className={`bg-dark h-screen pt-4 ${
           //hover:w-72
-          open ? "w-72" : `w-20 hover:${open ? "w-72" : "" }`
+          open ? "w-72" : "w-20"
         } sticky top-0 duration-100`}
       >
         <HiMenuAlt3
