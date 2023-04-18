@@ -12,7 +12,7 @@ const training_video= () => {
         <TopNav />
         <section className=" py-20 text-gray-500  ">
   <div className="container px-4 mx-auto bg-white  ">
-  <h2 className="text-2xl font-medium  text-gray-600  py-12"> ADD TRAINING VIDEO</h2>
+  <h2 className="text-lg font-medium  text-gray-600  py-12"> ADD TRAINING VIDEO</h2>
     <div className=" py-8 flex justify-center items-center -m-3 mb-3  ">
       <div className="w-full md:w-3/4 p-3">
         <div className="p-6 h-full overflow-hidden  rounded-md">
@@ -134,7 +134,7 @@ const training_video= () => {
 
 <div className="w-full md:w-1/2 p-3">
               <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                Video Link 1 : 
+                Video Link 1 
               </p>
               <input
                 className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -169,7 +169,7 @@ const training_video= () => {
 
 <div className="w-full md:w-1/2 p-3">
               <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                Video Link 2 : 
+                Video Link 2 
               </p>
               <input
                 className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -180,7 +180,7 @@ const training_video= () => {
 
             <div className="w-full md:w-1/2 p-3">
               <p className="mb-1.5 font-medium text-base text-coolGray-800">
-            Date :
+            Date 
               </p>
               <input
                 className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"

@@ -38,19 +38,7 @@ const add_course = () => {
          placeholder="Enter full Name "
        />
      </div>
-     <div className="w-full md:w-1/2 p-3">
-  <p className="mb-1.5 font-medium text-base text-coolGray-800">
-    Title:
-  </p>
-  <label className="inline-flex items-center">
-    <input
-      type="checkbox"
-      className="form-checkbox h-5 w-5 text-green-500 rounded-sm border-gray-300"
-    />
-    <span className="ml-2 text-gray-700 font-medium">Checkbox Label</span>
-  </label>
-</div>
-
+    
 
 
 
@@ -63,7 +51,7 @@ const add_course = () => {
 
 
 
-          <div className="py-3">
+          <div className="">
             <div className="w-full">
               <div className="flex flex-wrap">
                
@@ -76,6 +64,16 @@ const add_course = () => {
           <div className="py-3">
             <div className="w-full">
               <div className="flex flex-wrap">
+                <div className="w-full">
+                  <p className="mb-1 text-sm text-coolGray-800 font-semibold">
+                    Title 
+                  </p>
+                  <textarea
+                    className="block w-full h-16 p-4 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input resize-none"
+                    defaultValue={""}
+                  />
+                </div>
+
                 <div className="w-full">
                   <p className="mb-1 text-sm text-coolGray-800 font-semibold">
                     Description
