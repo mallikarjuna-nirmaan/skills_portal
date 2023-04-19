@@ -75,8 +75,8 @@ const SideNav = () => {
       title: "Settings",
       path: "settings",
       icon: <AiTwotoneSetting />,
-      submenu: true,
-      submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],
+      // submenu: true,
+      // submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],
     },
   ];
 
@@ -157,7 +157,7 @@ const SideNav = () => {
                   )}
                 </li>
               </Link>
-              {item.submenu && submenuOpen && open && (
+              {/* {item.submenu && submenuOpen && open && (
                 <ul>
                   {item.submenuItems.map((submenuItem, index) => (
                     <li
@@ -169,7 +169,7 @@ const SideNav = () => {
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
             </>
           ))}
         </ul>

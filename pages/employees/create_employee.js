@@ -158,7 +158,7 @@ const create_employee = () => {
                         </label>
                       </div>
                       <div>
-                        <button className="flex flex-wrap justify-center w-full md:w-auto md:ml-auto px-4 py-2 bg-dark hover:bg-[#127873] font-medium text-sm text-white border border-green-500 rounded-md shadow-button">
+                        <button className="flex flex-wrap justify-center w-full md:w-auto md:ml-auto px-4 py-2 bg-dark hover:bg-[#127873] font-medium text-sm text-white border border-green-200 rounded-md shadow-button">
                           <p>Save</p>
                         </button>
                       </div>
