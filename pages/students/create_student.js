@@ -1,6 +1,6 @@
-import React from "react";
 import SideNav from "@/components/SideNav";
 import TopNav from "@/components/TopNav";
+import { BsArrowLeftShort } from "react-icons/bs";
 
 const create_student = () => {
   return (
@@ -8,21 +8,29 @@ const create_student = () => {
       <SideNav />
       <div className="w-full">
         <TopNav />
-        <section className=" py-20 text-gray-500  ">
-          <div className="container px-4 mx-auto bg-white  ">
-            <h2 className="text-lg font-medium  text-gray-600  py-12">
+        <section className="py-4 text-gray-500">
+          <div className="h-14 mt-1 flex justify-between container w-[95%] mx-auto">
+            <p className="text-lg font-medium text-gray-800">Create Application</p>
+            <button className="bg-[#e1f0ff] hover:bg-[#609cff] hover:text-white duration-100 text-[#609cff] text-base font-semibold w-48 ml-2 py-1 flex h-9 mr-3 rounded-md">
+              <BsArrowLeftShort className="text-xl my-1 ml-1.5 font-semibold" />
+              Back to Applications
+            </button>
+          </div>
+          <div className="container w-[95%] px-4 mx-auto bg-white">
+            <h2 className="text-lg font-medium text-gray-600 mx-4 py-4">
               CREATE APPLICATION
             </h2>
-            <div className=" py-8 flex justify-center items-center -m-3 mb-3  ">
+            <hr />
+            <div className=" py-3 flex justify-center items-center -m-3 mb-3">
               <div className="w-full md:w-3/4 p-3">
-                <div className="p-6 h-full overflow-hidden  rounded-md">
+                <div className="p-3 h-full overflow-hidden rounded-md">
                   <div className="flex flex-wrap pb-3 -m-3">
-                    <div className="w-full  p-3 text-base font-bold ">
+                    <div className="w-full p-3 text-lg font-semibold">
                       Basic Details
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        First Name
+                        First Name: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -32,7 +40,7 @@ const create_student = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Last Name
+                        Last Name: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -43,7 +51,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Email
+                        Email: <span className="text-red-600">*</span>
                       </p>
                       <div className="relative">
                         <span className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -74,7 +82,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3 ">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Phone Number
+                        Phone Number: <span className="text-red-600">*</span>
                       </p>
                       <div className="relative">
                         <span className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -102,7 +110,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3 ">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        WhatsApp Number
+                        WhatsApp Number: <span className="text-red-600">*</span>
                       </p>
                       <div className="relative">
                         <span className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -130,7 +138,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Marital Status
+                        Marital Status: <span className="text-red-600">*</span>
                       </p>
                       <div className="inline-flex">
                         <label htmlFor="single" className="mr-4">
@@ -158,7 +166,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Gender
+                        Gender: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -172,7 +180,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Date of Birth
+                        Date of Birth: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -181,7 +189,7 @@ const create_student = () => {
                       />
                     </div>
 
-                    <div className="w-full  p-3 text-base font-bold ">
+                    <div className="w-full p-3 text-lg font-semibold">
                       Verification Details
                     </div>
 
@@ -209,7 +217,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        ID Proof Type
+                        ID Proof Type: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -223,7 +231,7 @@ const create_student = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        ID Proof Number
+                        ID Proof Number: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -233,7 +241,7 @@ const create_student = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Caste Category
+                        Caste Category: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -249,7 +257,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Religion
+                        Religion: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -262,13 +270,13 @@ const create_student = () => {
                       </select>
                     </div>
 
-                    <div className="w-full  p-3 text-base font-bold ">
+                    <div className="w-full p-3 text-lg font-semibold">
                       Education Details
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Qualification
+                        Qualification: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -286,7 +294,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Stream
+                        Stream: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -297,7 +305,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Year of passout
+                        Year of passout: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -313,7 +321,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        10th Pass Out In
+                        10th Pass Out In: <span className="text-red-600">*</span>
                       </p>
                       <div className="inline-flex">
                         <label htmlFor="single" className="mr-4">
@@ -341,7 +349,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        School Name
+                        School Name: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -351,7 +359,7 @@ const create_student = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Percentage in SSC
+                        Percentage in SSC: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -373,7 +381,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Graduated from which college
+                        Graduated from which college: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -384,7 +392,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Percentage in Graduation
+                        Percentage in Graduation: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -395,7 +403,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        College Address
+                        College Address: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full h-20 px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -406,7 +414,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        SSC Certificate
+                        SSC Certificate: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -416,7 +424,7 @@ const create_student = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Inter Certificate
+                        Inter Certificate: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -436,13 +444,13 @@ const create_student = () => {
                       />
                     </div>
 
-                    <div className="w-full  p-3 text-base font-bold ">
+                    <div className="w-full p-3 text-lg font-semibold">
                       Location Details
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Present Full Address
+                        Present Full Address: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full h-20 px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -453,7 +461,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Permanent Full Address
+                        Permanent Full Address: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full h-20 px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -464,7 +472,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Location
+                        Location: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -475,7 +483,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        District
+                        District: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -486,7 +494,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        State
+                        State: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -543,7 +551,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Enter Postcode
+                        Enter Postcode: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -552,13 +560,13 @@ const create_student = () => {
                       />
                     </div>
 
-                    <div className="w-full  p-3 text-base font-bold ">
+                    <div className="w-full p-3 text-lg font-semibold">
                       Family Details
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Guardian's Name
+                        Guardian's Name: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -569,7 +577,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Relationship with guardian
+                        Relationship with guardian: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -588,7 +596,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Guardian's Profession
+                        Guardian's Profession: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -599,7 +607,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Guardian's Phone Number
+                        Guardian's Phone Number: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -609,7 +617,7 @@ const create_student = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Highest educated in family
+                        Highest educated in family: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -629,7 +637,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Highest Education Qualification in Family
+                        Highest Education Qualification in Family: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -646,7 +654,7 @@ const create_student = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Family Annual Income
+                        Family Annual Income: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -666,7 +674,7 @@ const create_student = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Exact Family Income
+                        Exact Family Income: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -677,7 +685,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Number of Family Members
+                        Number of Family Members: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -686,13 +694,13 @@ const create_student = () => {
                       />
                     </div>
 
-                    <div className="w-full  p-3 text-base font-bold ">
+                    <div className="w-full p-3 text-lg font-semibold">
                       Other Details
                     </div>
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Course
+                        Course: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -708,7 +716,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Center
+                        Center: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -722,7 +730,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        how do you know about this Training?
+                        how do you know about this Training?: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -750,7 +758,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Upload Passport Size Photo
+                        Upload Passport Size Photo: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -761,7 +769,7 @@ const create_student = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-sm text-coolGray-800">
-                        Do you have a laptop or desktop?
+                        Do you have a laptop or desktop?: <span className="text-red-600">*</span>
                       </p>
                       <div className="inline-flex">
                         <label htmlFor="single" className="mr-4">
@@ -803,7 +811,7 @@ const create_student = () => {
 
                       <div>
                         <div>
-                          <button className="flex flex-wrap justify-center w-full md:w-auto md:ml-auto px-4 py-2 bg-dark hover:bg-[#127873] font-medium text-sm text-white border border-green-500 rounded-md shadow-button">
+                          <button className="flex flex-wrap justify-center w-full md:w-auto md:ml-auto px-5 py-2 bg-dark hover:bg-[#127873] font-medium text-sm text-white border border-green-300 rounded-md shadow-button">
                             <p>Save</p>
                           </button>
                         </div>

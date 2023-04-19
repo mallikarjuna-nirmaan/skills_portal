@@ -17,70 +17,63 @@ import AccordionMenu from "./AccordionMenu";
 import Link from "next/link";
 
 const SideNav = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [submenuOpen, setSubmenuOpen] = useState(false);
 
-  // const toggle = (index) => {
-  //   if (open === index) {
-  //     setOpen(null);
-  //   }
-  //   setOpen(index);
-  // };
-
   const Menus = [
-    { title: "Dashboard", path: "/dashboard" },
+    { title: "Dashboard", path: "dashboard" },
     {
       title: "Employees",
-      path: "/employees/create_employee",
+      path: "employees/create_employee",
       icon: <BsPersonSquare />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Courses",
-      path: "/courses/add_course",
+      path: "courses/add_course",
       icon: <ImBooks />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Batches",
-      path: "/batches/create_batch",
+      path: "batches/create_batch",
       icon: <IoIosPeople />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Students",
-      path: "/students/create_student",
+      path: "students/create_student",
       icon: <IoPerson />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Employers",
-      path: "/employers/create_employer",
+      path: "employers/create_employer",
       icon: <HiOfficeBuilding />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Placements",
-      path: "/placements/create_placement",
+      path: "placements/create_placement",
       icon: <BsPersonPlusFill />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Job Postings",
-      path: "/postings/add_job",
+      path: "postings/add_job",
       icon: <RiMailSendFill />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Settings",
-      path: "/",
+      path: "settings",
       icon: <AiTwotoneSetting />,
       submenu: true,
       submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],

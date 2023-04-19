@@ -1,5 +1,6 @@
 import SideNav from "@/components/SideNav";
 import TopNav from "@/components/TopNav";
+import { BsArrowLeftShort } from "react-icons/bs";
 
 const create_batch = () => {
   return (
@@ -7,18 +8,26 @@ const create_batch = () => {
       <SideNav />
       <div className="w-full">
         <TopNav />
-        <section className=" py-20 text-gray-500  ">
-          <div className="container px-4 mx-auto bg-white  ">
-            <h2 className="text-2xl font-medium  text-gray-600  py-12">
+        <section className="py-4 text-gray-500">
+          <div className="h-14 flex justify-between container w-[95%] mx-auto">
+            <p className="text-lg font-medium text-gray-800">Create Batches</p>
+            <button className="bg-[#e1f0ff] hover:bg-[#609cff] hover:text-white duration-100 text-[#609cff] text-base font-semibold w-44 ml-2 py-1 flex h-9 mr-3 rounded-md">
+              <BsArrowLeftShort className="text-xl my-1 ml-6 font-semibold" />
+              Back to Batch
+            </button>
+          </div>
+          <div className="container w-[95%] px-4 mx-auto bg-white">
+            <h2 className="text-lg font-medium text-gray-600 mx-4 py-4">
               CREATE BATCH
             </h2>
-            <div className=" py-8 flex justify-center items-center -m-3 mb-3  ">
+            <hr />
+            <div className=" py-3 flex justify-center items-center -m-3 mb-3  ">
               <div className="w-full md:w-3/4 p-3">
-                <div className="p-6 h-full overflow-hidden  rounded-md">
+                <div className="p-5 h-full overflow-hidden  rounded-md">
                   <div className="flex flex-wrap pb-3 -m-3">
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Batch ID#:
+                        Batch ID#: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -28,7 +37,7 @@ const create_batch = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Batch Code#:
+                        Batch Code#: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -38,7 +47,7 @@ const create_batch = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Course
+                        Course: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -52,7 +61,7 @@ const create_batch = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Course Code#:
+                        Course Code: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -63,7 +72,7 @@ const create_batch = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Start Date :
+                        Start Date: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -83,7 +92,7 @@ const create_batch = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Start Time:
+                        Start Time: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -94,7 +103,7 @@ const create_batch = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        End Time:
+                        End Time: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -105,7 +114,7 @@ const create_batch = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Batch Limit:
+                        Batch Limit: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -115,7 +124,7 @@ const create_batch = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Cycle:
+                        Cycle: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -130,7 +139,7 @@ const create_batch = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Eligible Min Age :
+                        Eligible Min Age: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -140,7 +149,7 @@ const create_batch = () => {
                     </div>
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Eligible Max Age :
+                        Eligible Max Age: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -151,7 +160,7 @@ const create_batch = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Eligible Qualification:
+                        Eligible Qualification: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -162,7 +171,7 @@ const create_batch = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Max Eligible Income:
+                        Max Eligible Income: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -173,7 +182,7 @@ const create_batch = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Gender:
+                        Gender: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -188,7 +197,7 @@ const create_batch = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Batch Status:
+                        Batch Status: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -217,7 +226,7 @@ const create_batch = () => {
 
                       <div>
                         <div>
-                          <button className="flex flex-wrap justify-center w-full md:w-auto md:ml-auto px-4 py-2 bg-dark hover:bg-[#127873] font-medium text-sm text-white border border-green-500 rounded-md shadow-button">
+                          <button className="flex flex-wrap justify-center w-full md:w-auto md:ml-auto px-5 py-2 bg-dark hover:bg-[#127873] font-medium text-sm text-white border border-green-300 rounded-md shadow-button">
                             <p>Save</p>
                           </button>
                         </div>
