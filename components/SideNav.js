@@ -17,7 +17,7 @@ import AccordionMenu from "./AccordionMenu";
 import Link from "next/link";
 
 const SideNav = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
 
   const Menus = [
@@ -81,7 +81,7 @@ const SideNav = () => {
   ];
 
   return (
-    <div className="float-left max-[980px]:hidden duration-300">
+    <div className={`float-left max-[980px]:hidden duration-300`}>
       <div
         className={`bg-dark h-screen pt-4 ${
           //hover:w-72
@@ -128,7 +128,10 @@ const SideNav = () => {
           )}
         </div>
 
-        <ul>
+        <ul
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
+        >
           {Menus.map((item, index) => (
             <>
               <Link href={`/${item.path}`}>
