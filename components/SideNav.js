@@ -83,10 +83,15 @@ const SideNav = () => {
   return (
     <div className={`float-left max-[980px]:hidden duration-300`}>
       <div
-        className={`bg-dark h-screen pt-4 ${
-          //hover:w-72
-          open ? "w-72" : "w-20"
-        } sticky top-0 duration-100`}
+       
+        className={`bg-dark h-screen pt-4 
+         ${
+          open ?  "w-72":"w-20"
+        }
+         sticky top-0 duration-100`}
+
+         onMouseEnter={() => (open ? "" :  setOpen(true))}
+         onMouseLeave={() =>  (open ? "": setOpen(false))}
       >
         <HiMenuAlt3
           onClick={() => setOpen(!open)}
@@ -128,10 +133,7 @@ const SideNav = () => {
           )}
         </div>
 
-        <ul
-          onMouseEnter={() => setOpen(true)}
-          onMouseLeave={() => setOpen(false)}
-        >
+        <ul>
           {Menus.map((item, index) => (
             <>
               <Link href={`/${item.path}`}>
