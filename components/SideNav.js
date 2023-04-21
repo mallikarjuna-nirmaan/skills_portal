@@ -20,80 +20,78 @@ const SideNav = () => {
   const [open, setOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
 
-  // const toggle = (index) => {
-  //   if (open === index) {
-  //     setOpen(null);
-  //   }
-  //   setOpen(index);
-  // };
-
   const Menus = [
-    { title: "Dashboard", path: "/dashboard" },
+    { title: "Dashboard", path: "dashboard" },
     {
       title: "Employees",
-      path: "/employees/create_employee",
+      path: "employees/create_employee",
       icon: <BsPersonSquare />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Courses",
-      path: "/courses/add_course",
+      path: "courses/add_course",
       icon: <ImBooks />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Batches",
-      path: "/batches/create_batch",
+      path: "batches/create_batch",
       icon: <IoIosPeople />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Students",
-      path: "/students/create_student",
+      path: "students/create_student",
       icon: <IoPerson />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Employers",
-      path: "/employers/create_employer",
+      path: "employers/create_employer",
       icon: <HiOfficeBuilding />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Placements",
-      path: "/placements/create_placement",
+      path: "placements/create_placement",
       icon: <BsPersonPlusFill />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Job Postings",
-      path: "/postings/add_job",
+      path: "postings/add_job",
       icon: <RiMailSendFill />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Settings",
-      path: "/",
+      path: "settings",
       icon: <AiTwotoneSetting />,
-      submenu: true,
-      submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],
+      // submenu: true,
+      // submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],
     },
   ];
 
   return (
-    <div className="float-left max-[980px]:hidden duration-300">
+    <div className={`float-left max-[980px]:hidden duration-300`}>
       <div
-        className={`bg-dark h-screen pt-4 ${
-          //hover:w-72
-          open ? "w-72" : "w-20"
-        } sticky top-0 duration-100`}
+       
+        className={`bg-dark h-screen pt-4 
+         ${
+          open ?  "w-72":"w-20"
+        }
+         sticky top-0 duration-100`}
+
+         onMouseEnter={() => (open ? "" :  setOpen(true))}
+         onMouseLeave={() =>  (open ? "": setOpen(false))}
       >
         <HiMenuAlt3
           onClick={() => setOpen(!open)}
@@ -164,7 +162,7 @@ const SideNav = () => {
                   )}
                 </li>
               </Link>
-              {item.submenu && submenuOpen && open && (
+              {/* {item.submenu && submenuOpen && open && (
                 <ul>
                   {item.submenuItems.map((submenuItem, index) => (
                     <li
@@ -176,7 +174,7 @@ const SideNav = () => {
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
             </>
           ))}
         </ul>
