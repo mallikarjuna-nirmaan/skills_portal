@@ -1,14 +1,14 @@
-import SideNav from '@/components/SideNav';
-import TopNav from '@/components/TopNav';
+import SideNav from "@/components/SideNav";
+import TopNav from "@/components/TopNav";
 
-import { Fragment } from 'react';
-import { ImBooks } from 'react-icons/im';
-import { TbTie } from 'react-icons/tb';
-import { IoIosPeople } from 'react-icons/io';
-import { IoPeopleSharp, IoBagCheck } from 'react-icons/io5';
-import { BsPersonCheckFill, BsClockFill } from 'react-icons/bs';
-import { Menu, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { Fragment } from "react";
+import { ImBooks } from "react-icons/im";
+import { TbTie } from "react-icons/tb";
+import { IoIosPeople } from "react-icons/io";
+import { IoPeopleSharp, IoBagCheck } from "react-icons/io5";
+import { BsPersonCheckFill, BsClockFill } from "react-icons/bs";
+import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 // pie chart
 import {
@@ -19,8 +19,8 @@ import {
   Legend,
   CategoryScale,
   LinearScale,
-} from 'chart.js';
-import { Pie, Bar } from 'react-chartjs-2';
+} from "chart.js";
+import { Pie, Bar } from "react-chartjs-2";
 
 ChartJS.register(
   ArcElement,
@@ -32,20 +32,20 @@ ChartJS.register(
 );
 
 export const data1 = {
-  labels: ['male', 'female', 'others'],
+  labels: ["male", "female", "others"],
   datasets: [
     {
       // label: '# of Votes',
       data: [12.1, 87.8, 0],
       backgroundColor: [
-        'rgb(27, 197, 189)',
-        'rgb(105, 147, 255)',
-        'rgb(255,255,0,0.9)',
+        "rgb(27, 197, 189)",
+        "rgb(105, 147, 255)",
+        "rgb(255,255,0,0.9)",
       ],
       borderColor: [
-        'rgb(128,128,128, 0.3)',
-        'rgb(128,128,128, 0.3)',
-        'rgb(128,128,128, 0.3)',
+        "rgb(128,128,128, 0.3)",
+        "rgb(128,128,128, 0.3)",
+        "rgb(128,128,128, 0.3)",
       ],
       borderWidth: 2,
     },
@@ -53,20 +53,20 @@ export const data1 = {
 };
 
 export const data2 = {
-  labels: ['15-20', '21-25', '26+'],
+  labels: ["15-20", "21-25", "26+"],
   datasets: [
     {
       // label: '# of Votes',
       data: [40.3, 53.2, 6.1],
       backgroundColor: [
-        'rgb(27, 197, 189)',
-        'rgb(105, 147, 255)',
-        'rgb(255,255,0,0.9)',
+        "rgb(27, 197, 189)",
+        "rgb(105, 147, 255)",
+        "rgb(255,255,0,0.9)",
       ],
       borderColor: [
-        'rgb(128,128,128, 0.1)',
-        'rgb(128,128,128, 0.4)',
-        'rgb(128,128,128, 0.3)',
+        "rgb(128,128,128, 0.1)",
+        "rgb(128,128,128, 0.4)",
+        "rgb(128,128,128, 0.3)",
       ],
       borderWidth: 2,
     },
@@ -75,28 +75,28 @@ export const data2 = {
 
 const dashboard = () => {
   function classNames(...classes) {
-    return classes.filter(Boolean).join(' ');
+    return classes.filter(Boolean).join(" ");
   }
 
   const barData1 = {
-    labels: ['', '', ''],
+    labels: ["", "", ""],
     datasets: [
       {
-        label: 'placed',
+        label: "placed",
         data: [0, 0, 109],
-        backgroundColor: 'yellow',
+        backgroundColor: "yellow",
         borderWidth: 0,
       },
     ],
   };
 
   const barData2 = {
-    labels: ['cycle-1', 'cycle-2', 'cycle-3', 'cycle-4'],
+    labels: ["cycle-1", "cycle-2", "cycle-3", "cycle-4"],
     datasets: [
       {
-        label: 'placed',
+        label: "placed",
         data: [37, 25, 27, 0],
-        backgroundColor: 'yellow',
+        backgroundColor: "yellow",
         borderWidth: 0,
       },
     ],
@@ -107,15 +107,15 @@ const dashboard = () => {
       y: {
         title: {
           display: true,
-          text: '(Number of students)',
-          color: 'black',
+          text: "(Number of students)",
+          color: "black",
         },
       },
       x: {
         title: {
           display: true,
-          text: '2022-23',
-          color: 'black',
+          text: "2022-23",
+          color: "black",
         },
       },
     },
@@ -126,19 +126,19 @@ const dashboard = () => {
       y: {
         title: {
           display: true,
-          text: '(Number of students)',
-          fontStyle: 'bold',
-          color: 'black',
+          text: "(Number of students)",
+          fontStyle: "bold",
+          color: "black",
         },
       },
     },
   };
   return (
     <div className="flex">
-      <SideNav />
+      <SideNav className="relative" />
       <div className="w-full">
         <TopNav />
-        <div className="bg-[#eef0f8] px-7 py-8 max-[980px]:px-4 max-[980px]:py-4 h-full w-auto">
+        <div className="bg-[#eef0f8] px-7 py-8 max-[980px]:px-4 max-[980px]:py-4 w-auto">
           {/* Dashboard */}
           <div className="flex justify-between">
             <p className="font-semibold">Dashboard</p>
@@ -172,9 +172,9 @@ const dashboard = () => {
                             href="#"
                             className={classNames(
                               active
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-700',
-                              'block px-4 py-2 text-sm'
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
                             )}
                           >
                             Year-ex-1
@@ -187,9 +187,9 @@ const dashboard = () => {
                             href="#"
                             className={classNames(
                               active
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-700',
-                              'block px-4 py-2 text-sm'
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
                             )}
                           >
                             Year-ex-1
@@ -202,9 +202,9 @@ const dashboard = () => {
                             href="#"
                             className={classNames(
                               active
-                                ? 'bg-gray-100 text-gray-900'
-                                : 'text-gray-700',
-                              'block px-4 py-2 text-sm'
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block px-4 py-2 text-sm"
                             )}
                           >
                             Year-ex-1
@@ -218,9 +218,9 @@ const dashboard = () => {
                               type="submit"
                               className={classNames(
                                 active
-                                  ? 'bg-gray-100 text-gray-900'
-                                  : 'text-gray-700',
-                                'block w-full px-4 py-2 text-left text-sm'
+                                  ? "bg-gray-100 text-gray-900"
+                                  : "text-gray-700",
+                                "block w-full px-4 py-2 text-left text-sm"
                               )}
                             >
                               Year-ex-1

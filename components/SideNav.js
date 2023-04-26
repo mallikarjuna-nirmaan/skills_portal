@@ -1,12 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { BiChevronRight } from "react-icons/bi";
-import {
-  BsLayersFill,
-  BsDot,
-  BsPersonSquare,
-  BsPersonPlusFill,
-} from "react-icons/bs";
+import { BsLayersFill, BsPersonSquare, BsPersonPlusFill } from "react-icons/bs";
 import { ImBooks } from "react-icons/im";
 import { IoIosPeople } from "react-icons/io";
 import { IoPerson } from "react-icons/io5";
@@ -24,14 +19,14 @@ const SideNav = () => {
     { title: "Dashboard", path: "dashboard" },
     {
       title: "Employees",
-      path: "employees/create_employee",
+      path: "employees/create",
       icon: <BsPersonSquare />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
     },
     {
       title: "Courses",
-      path: "courses/add_course",
+      path: "courses/create",
       icon: <ImBooks />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],
@@ -78,58 +73,65 @@ const SideNav = () => {
       // submenu: true,
       // submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],
     },
+    // {
+    //   title: "Training Links",
+    //   path: "training-links/training-link",
+    //   icon: <AiTwotoneSetting />,
+    //   // submenu: true,
+    //   // submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],
+    // },
+    // {
+    //   title: "Training Videos",
+    //   path: "training-videos/training-video",
+    //   icon: <AiTwotoneSetting />,
+    //   // submenu: true,
+    //   // submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],
+    // },
+    // {
+    //   title: "Training eBooks",
+    //   path: "training-books/training-ebook",
+    //   icon: <AiTwotoneSetting />,
+    //   // submenu: true,
+    //   // submenuItems: [{ title: "Submenu 1" }, { title: "Submenu 1" }],
+    // },
   ];
 
   return (
     <div className={`float-left max-[980px]:hidden duration-300`}>
       <div
-       
-        className={`bg-dark h-screen pt-4 
-         ${
-          open ?  "w-72":"w-20"
-        }
+        className={`bg-dark h-screen 
+         ${open ? "w-72" : "w-20"}
          sticky top-0 duration-100`}
-
-         onMouseEnter={() => (open ? "" :  setOpen(true))}
-         onMouseLeave={() =>  (open ? "": setOpen(false))}
+        onMouseEnter={() => (open ? "" : setOpen(true))}
+        onMouseLeave={() => (open ? "" : setOpen(false))}
       >
-        <HiMenuAlt3
-          onClick={() => setOpen(!open)}
-          className={`bg-transparent text-4xl mt-1 absolute cursor-pointer ${
-            !open
-              ? "rotate-180 duration-300 text-blue-400"
-              : "text-gray-400 duration-300 hover:text-blue-400"
-          } right-6`}
-        />
         <div
-          className={`bg-white  ${
+          className={`bg-white flex sticky top-0 justify-between ${
             !open && "scale-0"
-          } duration-75 p-3 pl-8 -mt-5`}
+          } duration-75 py-2`}
         >
           <Image
-            className="cursor-pointer"
+            className="mx-3 cursor-pointer"
             src="/images/logo.png"
             width="100"
             height="10"
             alt="logo"
+          />
+          <HiMenuAlt3
+            onClick={() => setOpen(!open)}
+            className={`bg-transparent text-4xl my-2 mx-6 cursor-pointer ${
+              !open
+                ? "rotate-180 duration-300 text-blue-400"
+                : "text-gray-400 duration-300 hover:text-blue-400"
+            } right-6`}
           />
         </div>
 
-        {/* <div className="duration-500 p-1 pl-3">
-          <Image
-            className="cursor-pointer min-[980px]:hidden"
-            src="/images/logo.png"
-            width="100"
-            height="10"
-            alt="logo"
-          />
-        </div> */}
-
-        <div className={`mt-12 text-xs ml-6 ${open && "text-gray-700"} mb-3`}>
+        <div className={`mt-7 mx-4 mb-2 text-xs ml-6 ${open && "text-gray-700"}`}>
           {open ? (
-            <span className="font-semibold">MENU</span>
+            <span className="font-semibold my-2">MENU</span>
           ) : (
-            <span className="text-2xl mx-2">...</span>
+            <span className="text-2xl -my-2 mx-1.5">...</span>
           )}
         </div>
 
@@ -162,19 +164,6 @@ const SideNav = () => {
                   )}
                 </li>
               </Link>
-              {/* {item.submenu && submenuOpen && open && (
-                <ul>
-                  {item.submenuItems.map((submenuItem, index) => (
-                    <li
-                      key={index}
-                      className={`text-white flex text-[14px] pl-10 hover:bg-[#127873] duration-300 gap-x-5 cursor-pointer p-4`}
-                    >
-                      <BsDot className="font-semibold  text-xl text-gray-900" />
-                      {submenuItem.title}
-                    </li>
-                  ))}
-                </ul>
-              )} */}
             </>
           ))}
         </ul>

@@ -3,7 +3,7 @@ import TopNav from "@/components/TopNav";
 import Link from "next/link";
 import { BsArrowLeftShort } from "react-icons/bs";
 
-const create_employee = () => {
+const create = () => {
   return (
     <div className="flex bg-[#eef0f8]">
       <SideNav />
@@ -177,4 +177,4 @@ const create_employee = () => {
   );
 };
 
-export default create_employee;
+export default create;

@@ -10,7 +10,7 @@ const TopNav = () => {
 
   return (
     <div className="w-full sticky top-0">
-      <div className="bg-white max-[980px]:bg-[#1a1a27] max-[980px]:h-[58px] w-full shadow-md flex justify-between px-6 from-neutral-500 h-[70px]">
+      <div className="bg-white max-[980px]:bg-[#1a1a27] max-[980px]:h-[58px] w-full shadow-md flex justify-between px-6 from-neutral-500 h-[68px]">
         {/* <div className="duration-500 pl-0 p-1">
           <Image
             className="cursor-pointer min-[980px]:hidden"

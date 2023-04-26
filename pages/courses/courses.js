@@ -11,11 +11,11 @@ const create_employee = () => {
         <TopNav />
         <section className="py-4 text-gray-500">
           <div className="h-14 flex justify-between container w-[95%] mx-auto">
-            <p className="text-lg font-medium my-1 text-gray-800">Employee</p>
-            <Link href='./create'>
-              <button className="bg-[#3699ff] text-white hover:bg-[#227dd8] duration-200 text-base font-semibold w-44 ml-2 py-1 flex h-9 mr-3 rounded-md">
+            <p className="text-lg font-medium my-1 text-gray-800">Courses</p>
+            <Link href="./create">
+              <button className="bg-[#3699ff] text-white hover:bg-[#227dd8] duration-200 text-base font-semibold w-36 ml-2 py-1 flex h-9 mr-3 rounded-md">
                 <BsPlus className="text-3xl -my-0.5 ml-1.5 font-extrabold" />
-                Create employees
+                Add Course
               </button>
             </Link>
           </div>
@@ -41,13 +41,13 @@ const create_employee = () => {
                     <option value="" defaultValue>
                       All
                     </option>
-                    <option value="ongoing">Ongoing</option>
-                    <option value="left">Left</option>
+                    <option value="ongoing">Active</option>
+                    <option value="left">Inactive</option>
                   </select>
                 </div>
               </div>
               {/* for button */}
-              <div className="py-3">
+              {/* <div className="py-3">
                 <div className="flex justify-between items-center">
                   <div>
                     <label htmlFor="toggleButton" className="flex">
@@ -60,7 +60,7 @@ const create_employee = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             {/* table */}
             <div className="py-4">
