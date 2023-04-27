@@ -136,7 +136,7 @@ const dashboard = () => {
   return (
     <div className="flex">
       <SideNav className="relative" />
-      <div className="w-full">
+      <div className="w-screen">
         <TopNav />
         <div className="bg-[#eef0f8] px-7 py-8 max-[980px]:px-4 max-[980px]:py-4 w-auto">
           {/* Dashboard */}

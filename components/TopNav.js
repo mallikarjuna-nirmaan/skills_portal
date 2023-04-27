@@ -26,12 +26,11 @@ const TopNav = () => {
 
         {/* medium screen side drawer */}
         <div className="min-[980px]:hidden justify-between">
-          
-              <HiMenuAlt3
-                // onClick={() => setOpen(!open)}
-                className="text-4xl absolute w-[120px]  hover:text-blue-400 my-3 cursor-pointer duration-500 text-gray-600 right-6"
-              />
-          
+          <HiMenuAlt3
+            // onClick={() => setOpen(!open)}
+            className="text-4xl absolute w-[120px]  hover:text-blue-400 my-3 cursor-pointer duration-500 text-gray-600 right-6"
+          />
+
           <IoPerson className="text-2xl absolute hover:text-blue-400 my-[17px] cursor-pointer duration-500 text-gray-600 right-6" />
         </div>
 
@@ -46,6 +45,8 @@ const TopNav = () => {
             M
           </span>
         </button>
+
+        {/* drawerButton */}
       </div>
     </div>
   );

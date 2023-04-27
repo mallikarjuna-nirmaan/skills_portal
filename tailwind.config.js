@@ -1,21 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./node_modules/flowbite-react/**/*.js",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
 
     // Or if using `src` directory:
-    './src/**/*.{js,ts,jsx,tsx}',
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      visibility: ['group-hover'],
+      visibility: ["group-hover"],
       colors: {
-        dark: '#0aaaa0',
-        light: '#ffffff',
+        dark: "#0aaaa0",
+        light: "#ffffff",
       },
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")]
 };

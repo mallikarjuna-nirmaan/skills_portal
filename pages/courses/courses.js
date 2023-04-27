@@ -1,7 +1,8 @@
 import SideNav from "@/components/SideNav";
 import TopNav from "@/components/TopNav";
 import Link from "next/link";
-import { BsArrowLeftShort, BsPlus } from "react-icons/bs";
+import { BsPlus } from "react-icons/bs";
+import { FiEdit,FiSearch } from "react-icons/fi";
 
 const create_employee = () => {
   return (
@@ -19,30 +20,42 @@ const create_employee = () => {
               </button>
             </Link>
           </div>
-          <div className="container w-[95%] px-4 mx-auto py-4 bg-white">
-            <div className="flex justify-between border pr-4">
+          <div className="container w-[95%] px-7 mx-auto py-4 bg-white">
+            <div className="flex justify-between">
               <div className="flex">
-                <div className="p-3">
-                  <input
-                    className="w-80 px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-md shadow-input"
+                <div className="py-3">
+                  <label class="relative block">
+                    <span class="sr-only">Search</span>
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                      <FiSearch />
+                    </span>
+                    <input
+                      class="placeholder:text-slate-400 block bg-white w-72 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-1 sm:text-sm"
+                      placeholder="Search..."
+                      type="text"
+                      name="search"
+                    />
+                  </label>
+                  {/* <input
+                    className="w-80 px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-coolGray-200 rounded-md shadow-input"
                     type="text"
-                    placeholder="Enter First Name"
-                  />
+                    placeholder="Search..."
+                  /> */}
                 </div>
 
-                <div className="w-[450px] flex md:w-1/2 mx-2 py-3">
-                  <p className="my-2 mx-2 font-normal text-base text-coolGray-800">
+                <div className="w-[450px] flex md:w-1/2 mx-2 py-2">
+                  <p className="my-2.5 mr-2 ml-9 font-normal text-base text-coolGray-800">
                     Status:
                   </p>
                   <select
-                    className="w-80 px-4 py-2.5 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-md shadow-input"
+                    className="w-80 px-4 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-coolGray-200 rounded-md shadow-input"
                     defaultValue=""
                   >
                     <option value="" defaultValue>
                       All
                     </option>
-                    <option value="ongoing">Active</option>
-                    <option value="left">Inactive</option>
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
                   </select>
                 </div>
               </div>
@@ -63,22 +76,50 @@ const create_employee = () => {
               </div> */}
             </div>
             {/* table */}
-            <div className="py-4">
-              <table className="border table-auto">
-                <thead className="">
-                  <tr>
-                    <th>#ID</th>
-                    <th>FIRST NAME</th>
-                    <th>LAST NAME</th>
-                    <th>MOBILE</th>
-                    <th>EMAIL</th>
-                    <th>JOIN DATE</th>
-                    <th>ROLE</th>
-                    <th>JOB STATUS</th>
-                    <th>ACTIONS</th>
+            <div className="py-4 text-sm">
+              <table className="border-collapse table-auto align-middle">
+                <thead className="bg-dark text-white">
+                  <tr className="">
+                    <th className="text-start w-screen px-4 py-4">#ID</th>
+                    <th className="text-start w-screen px-4 py-4">
+                      SHORT NAME
+                    </th>
+                    <th className="text-start w-screen px-4 py-4">NAME</th>
+                    <th className="text-start w-screen px-4 py-4">
+                      DESCRIPTION
+                    </th>
+                    <th className="text-start w-screen px-4 py-4">STATUS</th>
+                    <th className="text-start w-screen px-4 py-4">ACTIONS</th>
                   </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody className="border bg-white">
+                  <tr className="">
+                    <td className="text-start w-screen px-4  py-4">
+                      mallikarjun
+                    </td>
+                    <td className="text-start w-screen px-4 py-4">bhavni</td>
+                    <td className="text-start w-screen px-4 py-4">aakash</td>
+                    <td className="text-start w-screen px-4 py-4">
+                      egre, fefehfuree, feufherfre
+                    </td>
+                    <td className="text-start w-screen px-4 py-4">
+                      akshaffffffffffffffy
+                    </td>
+                    <td className="text-start w-screen text-2xl font-extrabold px-4 py-4">
+                      <FiEdit className="border rounded-full text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff] " />
+                    </td>
+                  </tr>
+                  <tr className="">
+                    <td className="text-start w-screen px-4 py-4">vinod</td>
+                    <td className="text-start w-screen px-4 py-4">hi</td>
+                    <td className="text-start w-screen px-4 py-4">hi</td>
+                    <td className="text-start w-screen px-4 py-4">rushikesh</td>
+                    <td className="text-start w-screen px-4 py-4">hi</td>
+                    <td className="text-start w-screen text-2xl font-extrabold px-4 py-4">
+                      <FiEdit className="border rounded-full text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff] " />
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
