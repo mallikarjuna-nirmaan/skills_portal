@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import Footer from "../components/footer";
-import Header from "../components/Header";
+import Footer from "/components/footer";
+import Header from "/components/Header";
 import React, { useState } from "react";
 import CountUp from "react-countup";
 import { Inter } from "@next/font/google";
