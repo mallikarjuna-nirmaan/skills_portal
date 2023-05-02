@@ -1,11 +1,24 @@
 import SideNav from "@/components/SideNav";
 import TopNav from "@/components/TopNav";
 import Link from "next/link";
-import { BsPlus, BsFillCloudArrowUpFill } from "react-icons/bs";
+import { BsPlus, BsFillPeopleFill } from "react-icons/bs";
 import { BsEyeFill } from "react-icons/bs";
 import { FiEdit, FiSearch } from "react-icons/fi";
 
+import React, { useState } from "react";
+import Datepicker from "react-tailwindcss-datepicker";
+
 const create_employee = () => {
+  const [value, setValue] = useState({
+    startDate: new Date(),
+    endDate: new Date().setMonth(11),
+  });
+
+  const handleValueChange = (newValue) => {
+    console.log("newValue:", newValue);
+    setValue(newValue);
+  };
+
   return (
     <div className="flex bg-[#eef0f8]">
       <SideNav />
@@ -13,18 +26,20 @@ const create_employee = () => {
         <TopNav />
         <section className="py-4 text-gray-500">
           <div className="h-14 flex justify-between container w-[95%] mx-auto">
-            <p className="text-lg font-medium my-1 text-gray-800">Batches</p>
+            <p className="text-lg font-medium my-1 text-gray-800">
+              Applications
+            </p>
             <div className="flex justify-between">
-              <Link href="#">
-                <button className="bg-[#3699ff] text-white hover:bg-[#227dd8] duration-200 text-base font-semibold w-36 ml-2 py-1 flex h-9 mr-3 rounded-md">
-                  <BsFillCloudArrowUpFill className="text-xl my-1 mx-3 font-extrabold" />
-                  Bulk upload
+              <Link href="./students">
+                <button className="bg-[#3699ff] text-white hover:bg-[#227dd8] duration-200 text-base font-semibold w-40 ml-2 py-1 px-2 flex h-9 mr-3 rounded-md">
+                  <BsFillPeopleFill className="text-xl my-0.5 mx-2.5 font-extrabold" />
+                  Student List
                 </button>
               </Link>
-              <Link href="./create">
-                <button className="bg-[#3699ff] text-white hover:bg-[#227dd8] duration-200 text-base font-semibold w-36 ml-2 py-1 flex h-9 mr-3 rounded-md">
-                  <BsPlus className="text-3xl -my-0.5 ml-1.5 font-extrabold" />
-                  Create Batch
+              <Link href="./create-application">
+                <button className="bg-[#3699ff] text-white hover:bg-[#227dd8] duration-200 text-base font-semibold w-44 py-1 flex h-9 mr-3 rounded-md">
+                  <BsPlus className="text-3xl -my-0.5 ml-1 font-extrabold" />
+                  Create Application
                 </button>
               </Link>
             </div>
@@ -39,7 +54,7 @@ const create_employee = () => {
                       <FiSearch />
                     </span>
                     <input
-                      class="placeholder:text-slate-400 block bg-white w-64 py-2.5 border border-slate-300 rounded-md pl-9 pr-3 shadow-sm focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-1 sm:text-sm"
+                      class="placeholder:text-slate-400 block bg-white w-56 py-2.5 border border-slate-300 rounded-md pl-9 pr-3 shadow-sm focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-1 sm:text-sm"
                       placeholder="Search..."
                       type="text"
                       name="search"
@@ -57,7 +72,7 @@ const create_employee = () => {
                     Status:
                   </p> */}
                   <select
-                    className="w-72 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-coolGray-200 rounded-md shadow-input"
+                    className="w-56 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
                     defaultValue=""
                   >
                     <option value="" defaultValue>
@@ -73,16 +88,34 @@ const create_employee = () => {
                     Status:
                   </p> */}
                   <select
-                    className="w-72 px-4 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-coolGray-200 rounded-md shadow-input"
+                    className="w-60 px-4 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
                     defaultValue=""
                   >
                     <option value="" defaultValue>
                       Status(All)
                     </option>
-                    <option value="ongoing">Ongoing</option>
-                    <option value="completed">Completed</option>
-                    <option value="upcoming">Upcoming</option>
+                    <option value="registered">Registered</option>
+                    <option value="no-response">No Response</option>
+                    <option value="attended-interview">
+                      Attended Interview
+                    </option>
+                    <option value="arrended-written-exam">
+                      Attended Written Exam
+                    </option>
+                    <option value="selected">Selected</option>
+                    <option value="not-selected">Not Selected</option>
+                    <option value="hold">Hold</option>
+                    <option value="joined">Joined</option>
+                    <option value="not-joined">Not Joined</option>
                   </select>
+                </div>
+
+                <div className="w-[450px] flex mt-1 ml-3 md:w-1/2 mx-2 py-2">
+                  <Datepicker
+                    className="w-60 px-4 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-coolGray-200 rounded-md shadow-input"
+                    value={value}
+                    onChange={handleValueChange}
+                  />
                 </div>
               </div>
               {/* for button */}
@@ -106,20 +139,20 @@ const create_employee = () => {
               <table className="border-collapse table-auto align-middle">
                 <thead className="bg-dark text-white">
                   <tr className="">
-                    <th className="text-start w-screen px-4 py-4">BATCH ID#</th>
-                    <th className="text-start w-screen px-4 py-4">COURSE</th>
+                    <th className="text-start w-screen px-4 py-4">ID#</th>
+                    <th className="text-start w-screen px-4 py-4">NAME</th>
+                    <th className="text-start w-screen px-4 py-4">MOBILE</th>
+                    <th className="text-start w-screen px-4 py-4">EMAIL</th>
                     <th className="text-start w-screen px-4 py-4">
-                      START DATE
+                      APPLICATION STATUS
                     </th>
-                    <th className="text-start w-screen px-4 py-4">END DATE</th>
                     <th className="text-start w-screen px-4 py-4">
-                      TIME(START - END)
+                      QUALIFICATION
                     </th>
-                    <th className="text-start w-screen px-4 py-4">STATUS</th>
                     <th className="text-start w-screen px-4 py-4">
-                      STUDENTS (Selected/Limit)
+                      PERCENTAGE
                     </th>
-                    <th className="text-start w-screen px-4 py-4">GENDER</th>
+                    <th className="text-start w-screen px-4 py-4">PASS OUT</th>
                     <th className="text-start w-screen px-4 py-4">ACTIONS</th>
                   </tr>
                 </thead>

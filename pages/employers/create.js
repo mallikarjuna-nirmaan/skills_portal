@@ -10,15 +10,15 @@ const create_employer = () => {
         <TopNav />
         <section className="py-4 text-gray-500">
           <div className="h-14 mt-1 flex justify-between container w-[95%] mx-auto">
-            <p className="text-lg font-medium text-gray-800">Create Employee</p>
+            <p className="text-lg font-medium text-gray-800">Create Employer</p>
             <button className="bg-[#e1f0ff] hover:bg-[#609cff] hover:text-white duration-100 text-[#609cff] text-base font-semibold w-44 ml-2 py-1 flex h-9 mr-3 rounded-md">
               <BsArrowLeftShort className="text-xl my-1 ml-1.5 font-semibold" />
-              Back to employees
+              Back To Employers
             </button>
           </div>
           <div className="container w-[95%] px-4 mx-auto bg-white">
             <h2 className="text-lg font-medium text-gray-600 mx-4 py-4">
-              CREATE EMPLOYEE
+              CREATE EMPLOYER
             </h2>
             <hr />
             <div className=" py-3 flex justify-center items-center -m-3 mb-3  ">
@@ -27,7 +27,7 @@ const create_employer = () => {
                   <div className="flex flex-wrap pb-3 -m-3">
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Company Name: <span className='text-red-600'>*</span>
+                        Company Name: <span className="text-red-600">*</span>
                       </p>
                       <input
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input"
@@ -38,7 +38,7 @@ const create_employer = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Sector: <span className='text-red-600'>*</span>
+                        Sector: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white"
@@ -51,7 +51,7 @@ const create_employer = () => {
 
                     <div className="w-full md:w-1/2 p-3">
                       <p className="mb-1.5 font-medium text-base text-coolGray-800">
-                        Company Type: <span className='text-red-600'>*</span>
+                        Company Type: <span className="text-red-600">*</span>
                       </p>
                       <select
                         className="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-blue-500 border border-coolGray-200 rounded-lg shadow-input bg-white "

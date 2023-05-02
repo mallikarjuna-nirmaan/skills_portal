@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 
@@ -12,7 +13,7 @@ const Header = () => {
       <nav className="border px-5 py-4 h-24">
         <div className="w-[100%] flex justify-between">
           <div className="w-[32%] xl:w-1/3">
-            <a className="block max-w-max" href="/">
+            <a className="block max-w-max my-4" href="/">
               <img
                 className="h-8"
                 src="https://static.shuffle.dev/uploads/files/fd/fd2ad7b7c93525f1ee6109c8066e8d626a2a387f/microsoft.png"
@@ -21,13 +22,10 @@ const Header = () => {
             </a>
           </div>
 
-          <div className="w-[32%] border hidden xl:block xl:w-1/3">
-            <ul className="w-[90%] flex align-middle text-center">
-              <li className="">
-                <a
-                  className="text-gray-700 hover:text-coolGray-900 "
-                  href="/"
-                >
+          <div className="w-[34%] hidden xl:block xl:w-1/3">
+            <ul className="w-[90%] flex justify-between space-y-5 space-x-9 text-sm font-medium">
+              <li className="ml-1 mt-5">
+                <a className="text-gray-700 hover:text-coolGray-900 " href="/">
                   HOME
                 </a>
               </li>
@@ -108,11 +106,9 @@ const Header = () => {
               >
                 LOGIN
               </a>
-              <img
-                className="h-16"
-                src="/images/logo.png"
-                alt="logo"
-              />
+              <Link href="/">
+                <img className="h-16" src="/images/logo.png" alt="logo" />
+              </Link>
             </div>
           </div>
         </div>
