@@ -11,13 +11,13 @@ const create_employee = () => {
       <SideNav />
       <div className="w-full">
         <TopNav />
-        <section className="py-4 text-gray-500">
+        <section className="py-5 text-gray-500">
           <div className="h-14 flex justify-between container w-[95%] mx-auto">
-            <p className="text-lg font-medium my-1 text-gray-800">Employee</p>
+            <p className="text-lg font-medium my-1 text-gray-800">Employers</p>
             <Link href="./create">
               <button className="bg-[#3699ff] text-white hover:bg-[#227dd8] duration-200 text-base font-semibold w-44 ml-2 py-1 flex h-9 mr-3 rounded-md">
                 <BsPlus className="text-3xl -my-0.5 ml-1.5 font-extrabold" />
-                Create employees
+                Create Employer
               </button>
             </Link>
           </div>
@@ -49,14 +49,14 @@ const create_employee = () => {
                     Status:
                   </p>
                   <select
-                    className="w-80 px-4 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-coolGray-200 rounded-md shadow-input"
+                    className="w-80 px-4 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
                     defaultValue=""
                   >
                     <option value="" defaultValue>
                       All
                     </option>
-                    <option value="ongoing">Ongoing</option>
-                    <option value="left">Left</option>
+                    <option value="active">Active</option>
+                    <option value="closed">Closed</option>
                   </select>
                 </div>
               </div>
@@ -83,16 +83,13 @@ const create_employee = () => {
                   <tr className="">
                     <th className="text-start w-screen px-4 py-4">#ID</th>
                     <th className="text-start w-screen px-4 py-4">
-                      FIRST NAME
+                      COMPANY NAME
                     </th>
-                    <th className="text-start w-screen px-4 py-4">LAST NAME</th>
-                    <th className="text-start w-screen px-4 py-4">MOBILE</th>
-                    <th className="text-start w-screen px-4 py-4">EMAIL</th>
-                    <th className="text-start w-screen px-4 py-4">JOIN DATE</th>
-                    <th className="text-start w-screen px-4 py-4">ROLE</th>
+                    <th className="text-start w-screen px-4 py-4">SECTOR</th>
                     <th className="text-start w-screen px-4 py-4">
-                      JOB STATUS
+                      NUMBER OF STUDENTS PLACED
                     </th>
+                    <th className="text-start w-screen px-4 py-4">STATUS</th>
                     <th className="text-start w-screen px-4 py-4">ACTIONS</th>
                   </tr>
                 </thead>
@@ -109,28 +106,22 @@ const create_employee = () => {
                     <td className="text-start w-screen px-4 py-4">
                       akshaffffffffffffffy
                     </td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start flex w-fit text-2xl font-extrabold px-4 py-4">
                       <BsEyeFill className="border rounded-full hover:duration-300 text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
                       <FiEdit className="border rounded-full hover:duration-300 text-sky-600 mx-2 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
                     </td>
                   </tr>
-                  <tr className="">
+                  {/* <tr className="">
                     <td className="text-start w-screen px-4 py-4">vinod</td>
                     <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start w-screen px-4 py-4">rushikesh</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start w-screen px-4 py-4">basavaraj</td>
                     <td className="text-start flex w-fit text-2xl font-extrabold px-4 py-4">
                       <BsEyeFill className="border rounded-full hover:duration-300 text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
                       <FiEdit className="border rounded-full hover:duration-300 text-sky-600 mx-2 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
                     </td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
             </div>

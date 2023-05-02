@@ -3,7 +3,7 @@ import TopNav from "@/components/TopNav";
 import Link from "next/link";
 import { BsPlus } from "react-icons/bs";
 import { BsEyeFill } from "react-icons/bs";
-import { FiEdit,FiSearch } from "react-icons/fi";
+import { FiEdit, FiSearch } from "react-icons/fi";
 
 const create_employee = () => {
   return (
@@ -49,7 +49,7 @@ const create_employee = () => {
                     Status:
                   </p>
                   <select
-                    className="w-80 px-4 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-coolGray-200 rounded-md shadow-input"
+                    className="w-80 px-4 my-1 cursor-pointer text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-coolGray-200 rounded-md shadow-input"
                     defaultValue=""
                   >
                     <option value="" defaultValue>
@@ -113,11 +113,11 @@ const create_employee = () => {
                     <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start flex w-fit text-2xl font-extrabold px-4 py-4">
-                      <BsEyeFill className="border rounded-full hover:duration-300 text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
-                      <FiEdit className="border rounded-full hover:duration-300 text-sky-600 mx-2 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
+                      <BsEyeFill className="border rounded-full cursor-pointer hover:duration-300 text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
+                      <FiEdit className="border rounded-full cursor-pointer hover:duration-300 text-sky-600 mx-2 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
                     </td>
                   </tr>
-                  <tr className="">
+                  {/* <tr className="">
                     <td className="text-start w-screen px-4 py-4">vinod</td>
                     <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start w-screen px-4 py-4">hi</td>
@@ -127,10 +127,10 @@ const create_employee = () => {
                     <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start w-screen px-4 py-4">basavaraj</td>
                     <td className="text-start flex w-fit text-2xl font-extrabold px-4 py-4">
-                      <BsEyeFill className="border rounded-full hover:duration-300 text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
-                      <FiEdit className="border rounded-full hover:duration-300 text-sky-600 mx-2 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
+                      <BsEyeFill className="border rounded-full cursor-pointer hover:duration-300 text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
+                      <FiEdit className="border rounded-full cursor-pointer hover:duration-300 text-sky-600 mx-2 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
                     </td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
             </div>
