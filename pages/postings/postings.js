@@ -35,7 +35,7 @@ const create_employee = () => {
                       <FiSearch />
                     </span>
                     <input
-                      class="placeholder:text-slate-400 block bg-white w-56 py-2.5 border border-slate-300 rounded-md pl-9 pr-3 shadow-sm focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-1 sm:text-sm"
+                      class="placeholder:text-slate-400 block bg-white w-72 py-2.5 border border-slate-300 rounded-md pl-9 pr-3 shadow-sm focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-1 sm:text-sm"
                       placeholder="Search..."
                       type="text"
                       name="search"
@@ -49,51 +49,19 @@ const create_employee = () => {
                 </div>
 
                 <div className="w-[450px] flex ml-4 md:w-1/2 mx-2 py-2">
-                  {/* <p className="my-2.5 mr-2 ml-9 font-normal text-base text-coolGray-800">
+                  <p className="my-2.5 mr-2 ml-9 font-normal text-base text-coolGray-800">
                     Status:
-                  </p> */}
+                  </p>
                   <select
-                    className="w-44 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
+                    className="w-72 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
                     defaultValue=""
                   >
                     <option value="" defaultValue>
-                      Years (All)
+                        
+                      All
                     </option>
-                    <option value="2023-2024">2023-2024</option>
-                  </select>
-                </div>
-
-                <div className="w-[450px] flex ml-4 md:w-1/2 mx-2 py-2">
-                  {/* <p className="my-2.5 mr-2 ml-9 font-normal text-base text-coolGray-800">
-                    Status:
-                  </p> */}
-                  <select
-                    className="w-44 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
-                    defaultValue=""
-                  >
-                    <option value="" defaultValue>
-                      Gender (All)
-                    </option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="others">Others</option>
-                  </select>
-                </div>
-
-                <div className="w-[450px] flex ml-4 md:w-1/2 mx-2 py-2">
-                  {/* <p className="my-2.5 mr-2 ml-9 font-normal text-base text-coolGray-800">
-                    Status:
-                  </p> */}
-                  <select
-                    className="w-56 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
-                    defaultValue=""
-                  >
-                    <option value="" defaultValue>
-                      Company Type (All)
-                    </option>
-                    <option value="mnc">MNC</option>
-                    <option value="mid-level">Mid Level</option>
-                    <option value="startup">Startup</option>
+                    <option value="active">Active</option>
+                    <option value="closed">Closed</option>
                   </select>
                 </div>
               </div>
