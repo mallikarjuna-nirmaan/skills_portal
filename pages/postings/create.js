@@ -1,5 +1,6 @@
 import SideNav from "@/components/SideNav";
 import TopNav from "@/components/TopNav";
+import Link from "next/link";
 import { BsArrowLeftShort } from "react-icons/bs";
 
 const add_job = () => {
@@ -8,13 +9,15 @@ const add_job = () => {
       <SideNav />
       <div className="w-full">
         <TopNav />
-        <section className="py-4 text-gray-500">
+        <section className="py-5 text-gray-500">
           <div className="h-14 flex justify-between container w-[95%] mx-auto">
             <p className="text-lg font-medium text-gray-800">Add Job Post</p>
-            <button className="bg-[#e1f0ff] hover:bg-[#609cff] hover:text-white duration-100 text-[#609cff] text-base font-semibold w-40 ml-2 py-1 flex h-9 mr-3 rounded-md">
-              <BsArrowLeftShort className="text-xl my-1 ml-1.5 font-semibold" />
-              Back to Postings
-            </button>
+            <Link href="./postings">
+              <button className="bg-[#e1f0ff] hover:bg-[#609cff] hover:text-white duration-100 text-[#609cff] text-base font-semibold w-40 ml-2 py-1 flex h-9 mr-3 rounded-md">
+                <BsArrowLeftShort className="text-xl my-1 ml-1.5 font-semibold" />
+                Back to Postings
+              </button>
+            </Link>
           </div>
           <div className="container w-[95%] px-4 mx-auto bg-white">
             <h2 className="text-lg font-medium text-gray-600 mx-4 py-4">

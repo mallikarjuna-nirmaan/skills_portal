@@ -61,7 +61,7 @@ const SideNav = () => {
     },
     {
       title: "Job Postings",
-      path: "postings/add_job",
+      path: "postings/create",
       icon: <RiMailSendFill />,
       // submenu: true,
       // submenuItems: [{ title: 'Submenu 1' }, { title: 'Submenu 1' }],

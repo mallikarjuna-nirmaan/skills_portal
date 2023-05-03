@@ -1,7 +1,7 @@
 import SideNav from "@/components/SideNav";
 import TopNav from "@/components/TopNav";
 import Link from "next/link";
-import { BsArrowLeftShort } from "react-icons/bs";
+import { BsPlus } from "react-icons/bs";
 import { BsEyeFill } from "react-icons/bs";
 import { FiEdit, FiSearch } from "react-icons/fi";
 
@@ -13,12 +13,12 @@ const create_employee = () => {
         <TopNav />
         <section className="py-4 text-gray-500">
           <div className="h-14 flex justify-between container w-[95%] mx-auto">
-            <p className="text-lg font-medium my-1 text-gray-800">Students</p>
+            <p className="text-lg font-medium my-1 text-gray-800">Placements</p>
             <div className="flex justify-between">
-              <Link href="./applications">
-                <button className="bg-[#3699ff] text-white hover:bg-[#227dd8] duration-200 text-base font-semibold w-48 ml-2 py-1 flex h-9 mr-3 rounded-md">
-                  <BsArrowLeftShort className="text-3xl -my-0.5 ml-0.5 font-extrabold" />
-                  Back To Applications
+              <Link href="./create">
+                <button className="bg-[#3699ff] text-white hover:bg-[#227dd8] duration-200 text-base font-semibold w-40 ml-2 py-1 flex h-9 mr-3 rounded-md">
+                  <BsPlus className="text-3xl -my-0.5 ml-1 font-extrabold" />
+                  Add Placement
                 </button>
               </Link>
             </div>
@@ -33,7 +33,7 @@ const create_employee = () => {
                       <FiSearch />
                     </span>
                     <input
-                      class="placeholder:text-slate-400 block bg-white w-52 py-2.5 border border-slate-300 rounded-md pl-9 pr-3 shadow-sm focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-1 sm:text-sm"
+                      class="placeholder:text-slate-400 block bg-white w-56 py-2.5 border border-slate-300 rounded-md pl-9 pr-3 shadow-sm focus:outline-none focus:border-blue-400 focus:ring-blue-400 focus:ring-1 sm:text-sm"
                       placeholder="Search..."
                       type="text"
                       name="search"
@@ -51,7 +51,7 @@ const create_employee = () => {
                     Status:
                   </p> */}
                   <select
-                    className="w-40 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
+                    className="w-44 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
                     defaultValue=""
                   >
                     <option value="" defaultValue>
@@ -66,30 +66,15 @@ const create_employee = () => {
                     Status:
                   </p> */}
                   <select
-                    className="w-40 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
+                    className="w-44 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
                     defaultValue=""
                   >
                     <option value="" defaultValue>
-                      Batches (All)
+                      Gender (All)
                     </option>
-                    <option value="batch-a">Batch-A</option>
-                  </select>
-                </div>
-
-                <div className="w-[450px] flex ml-3 md:w-1/2 mx-2 py-2">
-                  {/* <p className="my-2.5 mr-2 ml-9 font-normal text-base text-coolGray-800">
-                    Status:
-                  </p> */}
-                  <select
-                    className="w-40 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
-                    defaultValue=""
-                  >
-                    <option value="" defaultValue>
-                      Status (All)
-                    </option>
-                    <option value="graduate">Graduate</option>
-                    <option value="drop-out">Drop Out</option>
-                    <option value="on-going">On Going</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
                   </select>
                 </div>
 
@@ -98,14 +83,15 @@ const create_employee = () => {
                     Status:
                   </p> */}
                   <select
-                    className="w-52 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
+                    className="w-56 px-3 my-1 text-sm text-coolGray-900 font-normal outline-none focus:border-blue-200 border border-gray-300 rounded-md shadow-input"
                     defaultValue=""
                   >
                     <option value="" defaultValue>
-                      Placements (All)
+                      Company Type (All)
                     </option>
-                    <option value="placed">Placed</option>
-                    <option value="not-placed">Not Placed</option>
+                    <option value="mnc">MNC</option>
+                    <option value="mid-level">Mid Level</option>
+                    <option value="startup">Startup</option>
                   </select>
                 </div>
               </div>
@@ -135,16 +121,19 @@ const create_employee = () => {
                     </th>
                     <th className="text-start w-screen px-4 py-4">LAST NAME</th>
                     <th className="text-start w-screen px-4 py-4">MOBILE</th>
-                    <th className="text-start w-screen px-4 py-4">EMAIL</th>
                     <th className="text-start w-screen px-4 py-4">
-                      PLACEMENT STATUS
-                    </th>
-                    <th className="text-start w-screen px-4 py-4">
-                      STUDENT STATUS
+                      COMPANY NAME
                     </th>
                     <th className="text-start w-screen px-4 py-4">BATCH</th>
                     <th className="text-start w-screen px-4 py-4">
-                      QUALIFICATION
+                      DATE OF JOIN
+                    </th>
+                    <th className="text-start w-screen px-4 py-4">SALARY</th>
+                    <th className="text-start w-screen px-4 py-4">
+                      DESIGNATION
+                    </th>
+                    <th className="text-start w-screen px-4 py-4">
+                      OFFER LETTER
                     </th>
                     <th className="text-start w-screen px-4 py-4">ACTIONS</th>
                   </tr>
@@ -159,31 +148,16 @@ const create_employee = () => {
                     <td className="text-start w-screen px-4 py-4">bhavni</td>
                     <td className="text-start w-screen px-4 py-4">aakash</td>
                     <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">
-                      aksh
-                    </td>
+                    <td className="text-start w-screen px-4 py-4">aksh</td>
                     <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start w-screen px-4 py-4">hi</td>
                     <td className="text-start w-screen px-4 py-4">hi</td>
+                    <td className="text-start w-screen px-4 py-4"></td>
                     <td className="text-start flex w-fit text-2xl font-extrabold px-4 py-4">
-                      <BsEyeFill className="border rounded-full hover:duration-300 text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
-                      <FiEdit className="border rounded-full hover:duration-300 text-sky-600 mx-2 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
+                      <BsEyeFill className="border rounded-full cursor-pointer hover:duration-300 text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
+                      <FiEdit className="border rounded-full cursor-pointer hover:duration-300 text-sky-600 mx-2 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
                     </td>
                   </tr>
-                  {/* <tr className="">
-                    <td className="text-start w-screen px-4 py-4">vinod</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">rushikesh</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">hi</td>
-                    <td className="text-start w-screen px-4 py-4">basavaraj</td>
-                    <td className="text-start flex w-fit text-2xl font-extrabold px-4 py-4">
-                      <BsEyeFill className="border rounded-full hover:duration-300 text-sky-600 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
-                      <FiEdit className="border rounded-full hover:duration-300 text-sky-600 mx-2 border-sky-600 p-0.5 hover:text-white hover:bg-[#3699ff]" />
-                    </td>
-                  </tr> */}
                 </tbody>
               </table>
             </div>
